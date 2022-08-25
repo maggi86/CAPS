@@ -1,3 +1,51 @@
 <template>
-    <h1>hi</h1>
+<div clss="container">
+    <!-- <div class="column"> -->
+        <div class="row">
+            <div class="card">
+                <img class="img-fluid" src="https://i.postimg.cc/j5FpNC5V/istockphoto-508704980-612x612-removebg-preview-1.png" style="height:15em">
+                <img class="img-fluid" src="https://i.postimg.cc/Y94tKXzc/Screenshot-2022-08-25-114500-3-removebg-preview.png" style="height:8em; width:12em; padding-top:2%; padding-bottom:2%;">
+            </div>
+        </div>
+        <div class="row2">
+            
+        </div>
+    <!-- </div> -->
+</div>
 </template>
+
+<style scoped>
+.card{
+  min-height: fit-content;
+  width: 100%; 
+  /* margin-left: ; */
+  /* margin-right: auto; */
+  /* margin-top: 25%; */
+  box-shadow: 0px 15px 35px black;
+  /* background-color: black; */
+  /* border-radius: 6px; */
+  backdrop-filter: blur(2px);
+background-image: url("https://i.postimg.cc/0jrkWKg5/brooklyn-MO5q-O9xp-Zh-A-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top:3%
+}
+.row{
+height:80vh;
+}
+img{
+    /* margin-top:5%; */
+    /* height:45; */
+    /* width: 21%; */
+    aspect-ratio: 1;
+    margin-right: auto;
+    margin-left:auto;
+    /* padding-top:3%; */
+}
+h1{
+margin-right: auto;
+margin-left:auto; 
+font-weight:12px;
+color:black
+}
+</style>

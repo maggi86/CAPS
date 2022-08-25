@@ -1,13 +1,13 @@
 <template>
-<Contact/>
+<Contacts/>
 </template>
 
 <script>
-import Contact from "@/components/contacts.vue"
+import Contacts from "@/components/contacts.vue"
 
 export default{
     components:{
-        Contact
+        Contacts
     }
 }
 </script>

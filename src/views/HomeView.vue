@@ -5,8 +5,7 @@
 <script>
 import Home from '@/components/home.vue'
 
-export default {
-  name: 'HomeView',
+export default{
   components: {
     Home
   }
