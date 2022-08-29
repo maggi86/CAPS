@@ -1,10 +1,10 @@
 <template>
-<div clss="container">
+<div class="container">
     <!-- <div class="column"> -->
         <div class="row">
             <div class="card">
                 <img class="img-fluid" src="https://i.postimg.cc/j5FpNC5V/istockphoto-508704980-612x612-removebg-preview-1.png" style="height:15em">
-                <img class="img-fluid" src="https://i.postimg.cc/Y94tKXzc/Screenshot-2022-08-25-114500-3-removebg-preview.png" style="height:8em; width:12em; padding-top:2%; padding-bottom:2%;">
+                <img class="img-fluid" src="https://i.postimg.cc/Y94tKXzc/Screenshot-2022-08-25-114500-3-removebg-preview.png" style="height:8em; width:13em; padding-top:2%; padding-bottom:2%;">
             </div>
         </div>
         <div class="row2">
@@ -24,6 +24,8 @@
   box-shadow: 0px 15px 35px black;
   /* background-color: black; */
   /* border-radius: 6px; */
+  border-width:0;
+  border-radius:0;
   backdrop-filter: blur(2px);
 background-image: url("https://i.postimg.cc/0jrkWKg5/brooklyn-MO5q-O9xp-Zh-A-unsplash.jpg");
     background-size: cover;
@@ -32,6 +34,9 @@ background-image: url("https://i.postimg.cc/0jrkWKg5/brooklyn-MO5q-O9xp-Zh-A-uns
 }
 .row{
 height:80vh;
+}
+.container{
+    max-width: 100%;
 }
 img{
     /* margin-top:5%; */

@@ -1,12 +1,33 @@
 <template>
-    <single/>
+  <div id="single">
+    <div class="container p-3">
+      <div v-if="prod">
+        <div class="row">
+          <div class="col-md-6">
+            <img :src="prod.img" alt="" />
+          </div>
+          <div class="col-md-6 mx-auto text-center">
+            <h2>{{ prod.title }}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import single from "@/components/single.vue"
-export default{
-    components:{
-        single
-    }
-}
+export default {
+  props: ["id"],
+  computed: {
+    prod() {
+      return this.$store.state.prod;
+    },
+  },
+  mounted() {
+    this.$store.dispatch("getProd", this.id);
+  },
+};
 </script>
+
+<style scoped>
+</style>
