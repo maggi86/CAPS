@@ -25,8 +25,16 @@
     </router-link>
     
     <router-link to="/admin">
-        <a>Admin</a>
+        <a>Admin </a>
     </router-link>
+
+<router-link to="/cart">
+        <a>Cart</a>
+    </router-link>
+
+    <button class="btn" @click="logout">
+      logout
+    </button>
     <!-- <router-link :to="name='contact'">
         <a> contact </a>
     </router-link> -->
@@ -34,6 +42,19 @@
   </div>
 </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    logout() {
+      this.$store.state.token  = null
+      this.$store.state.user  = null
+      this.$store.state.cart  = null
+      localStorage.clear()
+    }
+  },
+}
+</script>
 
 <style scoped>
 .container{

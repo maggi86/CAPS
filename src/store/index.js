@@ -3,14 +3,18 @@ import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    user: null,
+    user: null || JSON.parse(localStorage.getItem("user")),
     prods: null,
     prod: null,
+    cart: null,
+    token: null || localStorage.getItem("token"),
+    admin: false,
   },
   getters: {},
   mutations: {
     setUser: (state, user) => {
       state.user = user;
+      localStorage.setItem("user", JSON.stringify(user));
     },
     setProds: (state, prods) => {
       state.prods = prods;
@@ -18,8 +22,22 @@ export default createStore({
     setProd: (state, prod) => {
       state.prod = prod;
     },
+    setCart: (state, cart) => {
+      console.log(cart);
+      state.cart = cart;
+    },
+    setToken: (state, token) => {
+      state.token = token;
+      localStorage.setItem("token", token);
+    },
   },
   actions: {
+    check: (context) => {
+      let user = context.state.user;
+      if (user != null) {
+      context.dispatch("getCart")
+      }
+    },
     // prods
     getProds: (context) => {
       fetch("http://localhost:7001/products")
@@ -37,34 +55,49 @@ export default createStore({
     },
 
     // add item
-    addProd : (context, product) => {
+    addProd: (context, product) => {
       fetch("http://localhost:7001/products", {
-        method : "POST",
-        body : JSON.stringify(product),
+        method: "POST",
+        body: JSON.stringify(product),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
       })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        context.dispatch("getProds")
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          context.dispatch("getProds");
+        });
+    },
+
+    // update
+    updateProd: (context, product) => {
+      fetch("http://localhost:7001/products/" + product.id, {
+        method: "PUT",
+        body: JSON.stringify(product),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
       })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        });
     },
 
     // delete item
     deleteProd: (context, id) => {
       fetch("http://localhost:7001/products/" + id, {
-        method : "DELETE",
-        headers : {
+        method: "DELETE",
+        headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
       })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        context.dispatch("getProds") 
-      });
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          context.dispatch("getProds");
+        });
     },
 
     // login
@@ -74,13 +107,19 @@ export default createStore({
         body: JSON.stringify(payload),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
+          "x-auth-token": context.state.token,
         },
       })
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
-          context.commit("setUser", data.results);
-          router.push("/all");
+          if (data.msg === "Login Successful") {
+            context.commit("setUser", data.results);
+            context.commit("setToken", data.token);
+            router.push("/all");
+          } else {
+            alert(data.msg);
+          }
         });
     },
 
@@ -100,6 +139,53 @@ export default createStore({
           router.push("/all");
         });
     },
+
+    // cart goetes
+    getCart: (context, id) => {
+      if (context.state.user === null) {
+        alert("Please Login");
+      } else {
+        id = context.state.user.id;
+        fetch(`http://localhost:7001/users/${id}/cart`, {
+          method: "GET",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+            "x-auth-token": context.state.token,
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data != null) {
+              context.commit("setCart", JSON.parse(data));
+            }
+          });
+      }
+    },
+
+    // addto cart
+    addToCart : async (context, item, id) => {
+      console.log(item);
+      if (context.state.user === null) {
+        alert("Please Login");
+      } else {
+        id = context.state.user.id;
+        fetch(`http://localhost:7001/users/${id}/cart`, {
+          method: "POST",
+          body : JSON.stringify(item),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+            "x-auth-token": context.state.token,
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            // if (data != null) {
+            //   context.commit("setCart", JSON.parse(data));
+            // }
+          });
+      }
+    }
   },
   modules: {},
 });
