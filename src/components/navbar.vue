@@ -58,9 +58,9 @@ export default {
 
 <style scoped>
 .container{
-  height:50px;
+  height:100px;
   max-width:100%;
-  background-image:url("https://i.postimg.cc/0jrkWKg5/brooklyn-MO5q-O9xp-Zh-A-unsplash.jpg");
+  background-image:url("https://i.postimg.cc/wTLgH2jM/Gods-Articulate-Finger-4.jpg");
   background-size: cover;
   --bs-gutter-x:0rem;
   

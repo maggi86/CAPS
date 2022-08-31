@@ -27,7 +27,7 @@
   border-width:0;
   border-radius:0;
   backdrop-filter: blur(2px);
-background-image: url("https://i.postimg.cc/0jrkWKg5/brooklyn-MO5q-O9xp-Zh-A-unsplash.jpg");
+background-image: url("https://i.postimg.cc/j2nFbRP9/b3491f9ce785ec0657ae6085d0032e92-removebg-preview-2.png");
     background-size: cover;
     background-repeat: no-repeat;
     padding-top:3%
@@ -54,3 +54,4 @@ font-weight:12px;
 color:black
 }
 </style>
+<!-- https://i.postimg.cc/0jrkWKg5/brooklyn-MO5q-O9xp-Zh-A-unsplash.jpg -->
