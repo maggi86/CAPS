@@ -2,7 +2,7 @@
 <div class="container">
     <!-- <div class="column"> -->
         <div class="row">
-            <div class="card">
+            <div class="card pb-3">
                 <img class="img-fluid" src="https://i.postimg.cc/j5FpNC5V/istockphoto-508704980-612x612-removebg-preview-1.png" style="height:15em">
                 <img class="img-fluid" src="https://i.postimg.cc/Y94tKXzc/Screenshot-2022-08-25-114500-3-removebg-preview.png" style="height:8em; width:13em; padding-top:2%; padding-bottom:2%;">
             </div>
@@ -27,13 +27,14 @@
   border-width:0;
   border-radius:0;
   backdrop-filter: blur(2px);
-background-image: url("https://i.postimg.cc/j2nFbRP9/b3491f9ce785ec0657ae6085d0032e92-removebg-preview-2.png");
+background-image: url("https://i.postimg.cc/0jrkWKg5/brooklyn-MO5q-O9xp-Zh-A-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top:3%
+    padding-top:150px;
 }
 .row{
-height:80vh;
+height:100vh;
+/* padding-top:100px */
 }
 .container{
     max-width: 100%;

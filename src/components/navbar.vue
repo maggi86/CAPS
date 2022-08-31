@@ -17,19 +17,19 @@
         <a>𝙿𝚛𝚘𝚍𝚞𝚌𝚝𝚜 </a>
     </router-link>
     <router-link to="/login">
-        <a>Login </a>
+        <a>𝙻𝚘𝚐𝚒𝚗  </a>
     </router-link>
     
     <router-link to="/register">
-        <a>Register </a>
+        <a>𝚂𝚒𝚐𝚗-𝚄𝚙  𝚁𝚎𝚐𝚒𝚜𝚝𝚎𝚛</a>
     </router-link>
     
     <router-link to="/admin">
-        <a>Admin </a>
+        <a> 𝙰𝚍𝚖𝚒𝚗 </a>
     </router-link>
 
 <router-link to="/cart">
-        <a>Cart</a>
+        <a>𝙲𝚊𝚛𝚝</a>
     </router-link>
 
     <button class="btn" @click="logout">
@@ -58,12 +58,13 @@ export default {
 
 <style scoped>
 .container{
-  height:100px;
+  height:50px;
   max-width:100%;
-  background-image:url("https://i.postimg.cc/wTLgH2jM/Gods-Articulate-Finger-4.jpg");
+  background-image:url("");
   background-size: cover;
   --bs-gutter-x:0rem;
-  
+  position:fixed;
+  z-index:1;
   
 }
 a{

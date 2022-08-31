@@ -185,7 +185,38 @@ export default createStore({
             // }
           });
       }
-    }
+    },
+
+    // all items in cart
+    deleteCart : (context, id) => {
+      fetch(`http://localhost:7001/users/${id}/cart`,{
+        method : "DELETE",
+        headers : {
+          "Content-type": "application/json; charset=UTF-8",
+          "x-auth-token": context.state.token, 
+        }
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+    },
+    
+    // one item in cart
+    deleteCart : (context, item,id) => {
+      fetch(`http://localhost:7001/users/${id}/cart`,{
+        method : "DELETE",
+        body : JSON.stringify(item),
+        headers : {
+          "Content-type": "application/json; charset=UTF-8",
+          "x-auth-token": context.state.token, 
+        }
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+    },
   },
   modules: {},
 });

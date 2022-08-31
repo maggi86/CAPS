@@ -46,5 +46,8 @@ export default {
 img {
  /* display:block; */
  /* width: 100%; */
+ border-radius:10px;
+ box-shadow: 0px 5px 10px black;
+
 }
 </style>

@@ -20,4 +20,11 @@ export default{
   padding:0;
   margin:0;
 }
+Nav{
+  position: fixed;
+  /* margin-bottom:50px; */
+}
+Footer{
+  background-color:var(--color-)
+}
 </style>

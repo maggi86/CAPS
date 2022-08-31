@@ -1,13 +1,12 @@
 <template>
-    <section id="products">
+<section id="products">
     <div v-if="prods">
         <div class="container pt-3">
             <div class="row mx-auto">
                 <All v-for="prod in prods" :key="prod" :prod="prod"/>
             </div>
         </div>
-    </div>
-    
+    </div>    
 </section>
 </template>
 
@@ -30,14 +29,16 @@ export default{
 
 <style scoped>
     #products{
-        background-color:rgba(173, 225, 177, 0.655);
-        background-image: url("https://i.postimg.cc/FHBsPRWX/1654807-ac61c.gif");
+        padding-top:50px;
+        /* background-color:rgba(173, 225, 177, 0.655); */
+        /* background-image: url("https://i.postimg.cc/prJ4kz5Z/53dd9d731f48f1f1acf0df8a57e07b45.jpg"); */
+        background-image: url("https://i.postimg.cc/MZNrj1dV/Cloud-Aesthetic-Picture.jpg");
         background-attachment: fixed;
         background-size: cover;
         -moz-background-size: cover;
         -webkit-background-size: cover;
         background-repeat: no-repeat;
-        background-position: center center;
+        /* background-position: center; */
     }
     /* .container{
     margin: 0;
