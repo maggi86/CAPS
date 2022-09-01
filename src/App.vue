@@ -1,5 +1,6 @@
 <template>
 <Nav/>
+<Lower/>
   <router-view/>
   <Footer/>
 </template>
@@ -7,11 +8,14 @@
 <script>
 import Nav from "@/components/navbar.vue"
 import Footer from "@/components/footer.vue"
+import Lower from "@/components/lowerNavbar.vue"
+
 
 export default{
   components:{
     Nav,
-    Footer
+    Footer,
+    Lower
   }
 }
 </script>
@@ -24,7 +28,7 @@ Nav{
   position: fixed;
   /* margin-bottom:50px; */
 }
-Footer{
-  background-color:var(--color-)
-}
+/* Footer{
+  width:100%
+} */
 </style>

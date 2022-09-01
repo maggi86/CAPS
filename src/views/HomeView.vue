@@ -1,16 +1,17 @@
 <template>
+<Lower/>
 <Home/>
 <About/>
 </template>
 
 <script>
 import Home from '@/components/home.vue'
-import About from '@/components/about.vue'
+import Lower from "@/components/lowerNavbar.vue"
 
 export default{
   components: {
     Home,
-    About
+    Lower
   }
 }
 </script>

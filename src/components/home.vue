@@ -16,8 +16,10 @@
 
 <style scoped>
 .card{
+  margin-top:50px;
   min-height: fit-content;
   width: 100%; 
+  /* height:auto; */
   /* margin-left: ; */
   /* margin-right: auto; */
   /* margin-top: 25%; */
@@ -26,8 +28,8 @@
   /* border-radius: 6px; */
   border-width:0;
   border-radius:0;
-  backdrop-filter: blur(2px);
-background-image: url("https://i.postimg.cc/0jrkWKg5/brooklyn-MO5q-O9xp-Zh-A-unsplash.jpg");
+  backdrop-filter: blur(5px);
+background-image: url("https://i.postimg.cc/fLxHRBms/birmingham-museums-trust-5-EUh-tq31e-A-unsplash-2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     padding-top:150px;
@@ -38,6 +40,8 @@ height:100vh;
 }
 .container{
     max-width: 100%;
+    background-color:black;
+    
 }
 img{
     /* margin-top:5%; */
@@ -46,6 +50,7 @@ img{
     aspect-ratio: 1;
     margin-right: auto;
     margin-left:auto;
+    /* box-shadow:0px 5px 5px black; */
     /* padding-top:3%; */
 }
 h1{

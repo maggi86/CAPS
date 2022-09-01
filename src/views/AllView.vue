@@ -1,4 +1,5 @@
 <template>
+<Lower/>
 <section id="products">
     <div v-if="prods">
         <div class="container pt-3">
@@ -12,9 +13,11 @@
 
 <script>
 import All from "@/components/products.vue"
+import Lower from "@/components/lowerNavbar.vue"
 export default{
     components:{
-        All
+        All,
+        Lower
     },
     computed:{
       prods() {
@@ -29,15 +32,16 @@ export default{
 
 <style scoped>
     #products{
-        padding-top:50px;
-        /* background-color:rgba(173, 225, 177, 0.655); */
+        padding-top:120px;
+        background-color:rgb(0, 0, 0);
         /* background-image: url("https://i.postimg.cc/prJ4kz5Z/53dd9d731f48f1f1acf0df8a57e07b45.jpg"); */
-        background-image: url("https://i.postimg.cc/MZNrj1dV/Cloud-Aesthetic-Picture.jpg");
+        background-image: url("https://i.postimg.cc/k45Qxd4M/aesthetic-stars-gif-png-largest-wallpaper-portal.gif");
         background-attachment: fixed;
         background-size: cover;
         -moz-background-size: cover;
         -webkit-background-size: cover;
         background-repeat: no-repeat;
+        padding-bottom:20px;
         /* background-position: center; */
     }
     /* .container{
@@ -56,8 +60,8 @@ export default{
     background-color: black;
 } */
 .container {
- column-count: 3;
- column-gap: 15px;
+ column-count: 4;
+ /* column-gap: 15px; */
  --bs-gutter-x:0px;
 }
 .row {
@@ -65,7 +69,13 @@ export default{
 flex-wrap:wrap;
  max-width: 100%; */
 }
-@media screen and (max-width:500px){
+@media screen and (max-width:1000px){
+.container{
+    column-count:3;
+    /* column-gap:10px; */
+}
+}
+@media screen and (max-width:575px){
 .container{
     column-count:2;
     /* column-gap:10px; */

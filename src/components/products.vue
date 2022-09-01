@@ -1,12 +1,12 @@
 <template>
-  <div class="card mx-auto g-2 border-0">
-  <div class="container">
-    <div class="row">
+  <div class="column mx-auto border-0" style="width: 300px; height:fit-content;">
+  <!-- <div class="container">
+    <div class="row"> -->
       <router-link :to="{ name: 'single', params: { id: prod.id } }">
-        <img :src="prod.img" class="img-fluid" alt="..." style="width:400px; height:auto;"/>
+        <img :src="prod.img" class="img-fluid" alt="..."/>
       </router-link>
-    </div>
-  </div>
+    <!-- </div>
+  </div> -->
   </div>
 </template>
 
@@ -25,11 +25,13 @@ export default {
     --card_med: 33;
     --card_large: 45;
 } */
-.card {
-  width: 400px;
-  height: 100%;
+.column {
+  /* height: 100%; */
+  /* height:min-content; */
   padding-top:10px;
   background-color: var(--color-);
+  -webkit-filter: grayscale(1);
+  filter:grayscale(1);
   /*
   border-width:0px; */
 
@@ -39,15 +41,28 @@ export default {
     border-radius: 5px;
     background-color: red; */
 }
-.container {
-/* background-color: pink; */
-
+.column:hover{
+  -webkit-filter: grayscale(0); 
+  filter: brightness(1);
 }
+/* .container {
+background-color: pink;
+
+} */
+/* .card:hover{
+
+} */
 img {
  /* display:block; */
  /* width: 100%; */
+ width: 400px;
  border-radius:10px;
  box-shadow: 0px 5px 10px black;
 
+}
+@media screen and (max-width:450px){
+  img{
+    width:300px;
+  }
 }
 </style>

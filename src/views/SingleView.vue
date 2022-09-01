@@ -4,7 +4,7 @@
       <div v-if="prod">
         <div class="row">
           <div class="col-md-6">
-            <img :src="prod.img" alt="" style="width:500px; height:auto; padding-top:30px;"/>
+            <img :src="prod.img" alt="" style="width:500px; height:auto; padding-top:0px;"/>
           </div>
           <div class="col-md-6 my-auto mx-auto text-center">
             <h1>{{ prod.title}}</h1>
@@ -45,7 +45,7 @@ export default {
 
 <style scoped>
   #single{
-    padding-top:70px
+    padding-top:100px
   }
   h1{
     font-size:40px;

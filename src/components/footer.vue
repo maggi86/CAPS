@@ -12,9 +12,19 @@ export default {
 
 <style scoped>
 footer{
-    padding-top:17px;
+  width:100%;
+    padding-top:7px;
     margin-bottom:0px;
+    /* padding-bottom:10px; */
     height:50px;
-    background-color:var(--color-)
+    background-color:rgb(153, 153, 153);
+}
+p{
+  margin-bottom:0px;
+}
+@media screen and (max-width:570px){
+  footer{
+    width:100%
+  }
 }
 </style>
