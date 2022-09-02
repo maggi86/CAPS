@@ -24,7 +24,11 @@ export default createStore({
     },
     setCart: (state, cart) => {
       console.log(cart);
-      state.cart = cart;
+      if((cart.length === 0) || (cart === null)) {
+        state.cart = null
+        console.log("object");
+      } else {
+      state.cart = cart;}
     },
     setToken: (state, token) => {
       state.token = token;
@@ -134,7 +138,7 @@ export default createStore({
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
+          // console.log(data);
           context.dispatch("login", payload);
           router.push("/all");
         });
@@ -188,7 +192,8 @@ export default createStore({
     },
 
     // all items in cart
-    deleteCart : (context, id) => {
+    deleteCart : (context) => {
+      id = context.state.user.id
       fetch(`http://localhost:7001/users/${id}/cart`,{
         method : "DELETE",
         headers : {
@@ -198,15 +203,16 @@ export default createStore({
       })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        console.log(data)
+        context.dispatch('getCart')
       })
     },
     
     // one item in cart
-    deleteCart : (context, item,id) => {
-      fetch(`http://localhost:7001/users/${id}/cart`,{
+    deleteItem : (context, item,id) => {
+      id = context.state.user.id
+      fetch(`http://localhost:7001/users/${id}/cart/${item}`,{
         method : "DELETE",
-        body : JSON.stringify(item),
         headers : {
           "Content-type": "application/json; charset=UTF-8",
           "x-auth-token": context.state.token, 
@@ -215,6 +221,7 @@ export default createStore({
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        context.dispatch('getCart')
       })
     },
   },

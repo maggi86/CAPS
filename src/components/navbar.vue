@@ -10,9 +10,9 @@
 <img src="https://i.postimg.cc/Y94tKXzc/Screenshot-2022-08-25-114500-3-removebg-preview.png">
       </div>
       <div class="col my-auto lead text-end">
-        <router-link to="/wishlist">
+        <!-- <router-link to="/wishlist">
         <a><i class="bi bi-heart m-1"></i>𝚆𝚒𝚜𝚑  𝙻𝚒𝚜𝚝</a>
-      </router-link>
+      </router-link> -->
   <router-link to="/cart">
         <a class="mx-3"><i class="bi bi-cart2 m-1"></i>𝙲𝚊𝚛𝚝</a>
       </router-link>  

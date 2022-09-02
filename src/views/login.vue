@@ -38,5 +38,7 @@ methods: {
 </script>
 
 <style>
-
+form{
+  padding-top:70px;
+}
 </style>

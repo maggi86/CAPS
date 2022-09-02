@@ -60,4 +60,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+  #admin{
+    padding-top:50px;
+  }
+</style>
