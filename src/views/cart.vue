@@ -121,7 +121,7 @@ export default {
 
 <style scoped>
 #cart {
-  padding-top: 170px;
+  /* padding-top: 170px; */
   min-height: 100vh;
 }
 .btn{

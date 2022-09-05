@@ -9,6 +9,7 @@ export default createStore({
     cart: null,
     token: null || localStorage.getItem("token"),
     admin: false,
+    me: false,
   },
   getters: {},
   mutations: {
@@ -24,11 +25,12 @@ export default createStore({
     },
     setCart: (state, cart) => {
       console.log(cart);
-      if((cart.length === 0) || (cart === null)) {
-        state.cart = null
+      if (cart.length === 0 || cart === null) {
+        state.cart = null;
         console.log("object");
       } else {
-      state.cart = cart;}
+        state.cart = cart;
+      }
     },
     setToken: (state, token) => {
       state.token = token;
@@ -39,8 +41,15 @@ export default createStore({
     check: (context) => {
       let user = context.state.user;
       if (user != null) {
-      context.dispatch("getCart")
+        context.dispatch("getCart");
       }
+      // if (user && singlepost != null) {
+      //   if(user.id === singlepost.id) {
+      //     me = true
+      //   }
+      //   context.dispatch("getCart");
+
+      // }
     },
     // prods
     getProds: (context) => {
@@ -167,7 +176,7 @@ export default createStore({
     },
 
     // addto cart
-    addToCart : async (context, item, id) => {
+    addToCart: async (context, item, id) => {
       console.log(item);
       if (context.state.user === null) {
         alert("Please Login");
@@ -175,7 +184,7 @@ export default createStore({
         id = context.state.user.id;
         fetch(`http://localhost:7001/users/${id}/cart`, {
           method: "POST",
-          body : JSON.stringify(item),
+          body: JSON.stringify(item),
           headers: {
             "Content-type": "application/json; charset=UTF-8",
             "x-auth-token": context.state.token,
@@ -192,37 +201,37 @@ export default createStore({
     },
 
     // all items in cart
-    deleteCart : (context) => {
-      id = context.state.user.id
-      fetch(`http://localhost:7001/users/${id}/cart`,{
-        method : "DELETE",
-        headers : {
+    deleteCart: (context) => {
+      id = context.state.user.id;
+      fetch(`http://localhost:7001/users/${id}/cart`, {
+        method: "DELETE",
+        headers: {
           "Content-type": "application/json; charset=UTF-8",
-          "x-auth-token": context.state.token, 
-        }
+          "x-auth-token": context.state.token,
+        },
       })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data)
-        context.dispatch('getCart')
-      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          context.dispatch("getCart");
+        });
     },
-    
+
     // one item in cart
-    deleteItem : (context, item,id) => {
-      id = context.state.user.id
-      fetch(`http://localhost:7001/users/${id}/cart/${item}`,{
-        method : "DELETE",
-        headers : {
+    deleteItem: (context, item, id) => {
+      id = context.state.user.id;
+      fetch(`http://localhost:7001/users/${id}/cart/${item}`, {
+        method: "DELETE",
+        headers: {
           "Content-type": "application/json; charset=UTF-8",
-          "x-auth-token": context.state.token, 
-        }
+          "x-auth-token": context.state.token,
+        },
       })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        context.dispatch('getCart')
-      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          context.dispatch("getCart");
+        });
     },
   },
   modules: {},

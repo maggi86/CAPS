@@ -1,5 +1,37 @@
 <template>
-    <div class="container">
+  <nav class="navbar navbar-expand-lg bg-light sticky-top">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"> <router-link to="/">
+          <a class="nav-link">𝙷𝚘𝚖𝚎 </a>
+        </router-link>
+        </li>
+        <li class="nav-item"> <router-link to="/about">
+            <a class="nav-link"> 𝙰𝚋𝚘𝚞𝚝 </a>
+        </router-link>
+        </li>
+        <li class="nav-item">  <router-link to="/contact">
+            <a class="nav-link">𝙲𝚘𝚗𝚝𝚊𝚌𝚝 𝚞𝚜 </a>
+        </router-link>
+        </li>
+        <li class="nav-item"> <router-link to="/all">
+            <a class="nav-link">𝙿𝚛𝚘𝚍𝚞𝚌𝚝𝚜 </a>
+        </router-link>    
+        </li>
+        <li class="nav-item">  <router-link to="/admin">
+            <a class="nav-link"> 𝙰𝚍𝚖𝚒𝚗 </a>
+        </router-link>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!-- <div class="container">
       <div class="card">
       <nav>
         <router-link to="/">
@@ -18,13 +50,13 @@
         </router-link>    
         <router-link to="/admin">
             <a> 𝙰𝚍𝚖𝚒𝚗 </a>
-        </router-link>
+        </router-link> -->
         <!-- <router-link :to="name='contact'">
             <a> contact </a>
         </router-link> -->
-      </nav>
+      <!-- </nav>
       </div>
-    </div>
+    </div> -->
     </template>
     
     <style scoped>
@@ -41,7 +73,7 @@
     a{
       text-decoration: none;
       color:rgb(94, 93, 93);
-      /* text-decoration-line:unset; */
+      text-decoration-line:unset;
       font-size:20px;
       font-weight: bold;
       margin:auto;

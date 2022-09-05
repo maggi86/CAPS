@@ -1,5 +1,5 @@
 <template>
-<Lower/>
+<!-- <Lower/> -->
 <Home/>
 <About/>
 </template>

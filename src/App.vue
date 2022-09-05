@@ -1,30 +1,29 @@
 <template>
-<Nav/>
-<Lower/>
-  <router-view/>
-  <Footer/>
+  <Nav />
+  <Lower />
+  <router-view />
+  <Footer />
 </template>
 
 <script>
-import Nav from "@/components/navbar.vue"
-import Footer from "@/components/footer.vue"
-import Lower from "@/components/lowerNavbar.vue"
+import Nav from "@/components/navbar.vue";
+import Lower from "@/components/lowerNavbar.vue";
+import Footer from "@/components/footer.vue";
 
-
-export default{
-  components:{
+export default {
+  components: {
     Nav,
     Footer,
-    Lower
-  }
-}
+    Lower,
+  },
+};
 </script>
 <style>
-*{
-  padding:0;
-  margin:0;
+* {
+  padding: 0;
+  margin: 0;
 }
-Nav{
+Nav {
   position: fixed;
   /* margin-bottom:50px; */
 }
