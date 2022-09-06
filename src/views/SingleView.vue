@@ -3,19 +3,18 @@
     <div class="container p-3">
       <div v-if="prod">
         <div class="row">
-          <div class="col-md-6">
-            <img :src="prod.img" alt="" style="width:500px; height:auto; padding-top:0px;"/>
+          <div class="col mx-auto text-center">
+            <img :src="prod.img"/>
           </div>
-          <div class="col-md-6 my-auto mx-auto text-center">
+          <div class="col my-auto mx-auto text-center">
             <h1>{{ prod.title}}</h1>
             <div>
               <p>{{prod.description}}</p>
               <p>{{prod.catergory}}</p>
               <p>{{prod.price}}</p>
+              <button @click="add" class="btn">add to cart</button>
             </div>
           </div>
-          
-          <button @click="add" class="btn">add to cart</button>
         </div>
       </div>
     </div>
@@ -27,6 +26,7 @@
 export default {
   props: ["id"],
   computed: {
+    
     prod() {
       return this.$store.state.prod;
     },
@@ -45,9 +45,7 @@ export default {
 </script>
 
 <style scoped>
-  #single{
-    padding-top:100px
-  }
+
   h1{
     font-size:40px;
     font-weight:bold;
@@ -57,5 +55,25 @@ export default {
     font-size:20px;
     font-weight:bold;
     font-family: monospace;
+  }
+  button{
+    margin-top:30px;
+    width:100%;
+    border-width:1px;
+    border-color:black
+  }
+  button:hover{
+    background-color:black;
+    color:white
+  }
+  img{
+    width:500px; 
+    height:auto; 
+    padding-top:0px;
+  }
+  @media screen and (max-width:576px){
+    img{
+    width:300px
+  }
   }
 </style>

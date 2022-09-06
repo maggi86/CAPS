@@ -25,7 +25,7 @@ export default createStore({
     },
     setCart: (state, cart) => {
       console.log(cart);
-      if (cart.length === 0 || cart === null) {
+      if ((cart === null)) {
         state.cart = null;
         console.log("object");
       } else {
@@ -155,9 +155,7 @@ export default createStore({
 
     // cart goetes
     getCart: (context, id) => {
-      if (context.state.user === null) {
-        alert("Please Login");
-      } else {
+      if (context.state.user != null) {
         id = context.state.user.id;
         fetch(`http://localhost:7001/users/${id}/cart`, {
           method: "GET",
@@ -170,8 +168,14 @@ export default createStore({
           .then((data) => {
             if (data != null) {
               context.commit("setCart", JSON.parse(data));
+            } else {
+              context.commit("setCart", null);
             }
+
           });
+      } else {
+        alert("Please Login");
+
       }
     },
 
@@ -201,7 +205,7 @@ export default createStore({
     },
 
     // all items in cart
-    deleteCart: (context) => {
+    deleteCart: (context ,id) => {
       id = context.state.user.id;
       fetch(`http://localhost:7001/users/${id}/cart`, {
         method: "DELETE",

@@ -1,8 +1,7 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-light sticky-top">
+  <nav class="navbar navbar-expand-lg sticky-top">
   <div class="container-fluid">
-    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -60,31 +59,38 @@
     </template>
     
     <style scoped>
-    .container{
-      margin-top:60px;
+    .container-fluid{
+      /* margin-top:60px; */
       max-width:100%;
-      background-color:black;
-      background-size: cover;
+      /* background-size: cover; */
       --bs-gutter-x:0rem;
-      position:fixed;
+      /* position:fixed; */
       z-index:1;
       overflow:hidden
+    }
+    .navbar{
+      background-color:black;
+      height:40px;
     }
     a{
       text-decoration: none;
       color:rgb(94, 93, 93);
-      text-decoration-line:unset;
+      /* text-decoration-line:unset; */
       font-size:20px;
       font-weight: bold;
-      margin:auto;
+      /* margin:auto; */
     }
+    a:hover {
+  color: rgb(163, 163, 163);
+
+}
     .card{
       height:30px;
       max-width:100%;
       background-size: cover;
       box-shadow: 0px 5px 25px var(--color-secondary);
       backdrop-filter: blur(5px);
-      background-color: var(--color-);
+      background-color: black;
       padding:0px;
       border-radius:0;
     }

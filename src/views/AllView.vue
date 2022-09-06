@@ -198,7 +198,7 @@ export default {
     background-color: black;
 } */
 .cols {
-  /* column-count: 4; */
+  column-count: 4;
   /* column-gap: 15px; */
   --bs-gutter-x: 0px;
 }

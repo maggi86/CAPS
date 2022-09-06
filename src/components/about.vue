@@ -16,9 +16,9 @@
       </div>
 
       <div class="row">
-        <div class="col my-auto">
-          <h3>Our Brand</h3>
-          <p>
+        <div class="col my-auto mx-auto">
+          <h3 class="text-center">Our Brand</h3>
+          <p class="mx-auto text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
             assumenda architecto eveniet at ad ut totam facilis quaerat
             voluptate perspiciatis eligendi quo amet quibusdam, iusto dolorum ea
@@ -26,23 +26,24 @@
           </p>
         </div>
         <div class="vr my-auto" style="height: 200px; width: 1px"></div>
-        <div class="col">
+        <div class="col mx-auto text-center">
           <img
             src="https://i.postimg.cc/j5FpNC5V/istockphoto-508704980-612x612-removebg-preview-1.png"
           />
         </div>
       </div>
       <div class="row">
-        <div class="col">
+        <div class="col mx-auto text-center">
           <img
-            src="https://i.postimg.cc/j5FpNC5V/istockphoto-508704980-612x612-removebg-preview-1.png"
-            style="width: "
+            src="https://i.postimg.cc/sDjnJCtj/Meagan-2.jpg"
+            style="width:300px;
+            margin-left:30px; "
           />
         </div>
         <div class="vr my-auto" style="height: 200px; width: 1px"></div>
-        <div class="col my-auto">
-          <h3>Our Team</h3>
-          <p>
+        <div class="col my-auto ">
+          <h3 class="text-center">Our Team</h3>
+          <p class="mx-auto text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
             assumenda architecto eveniet at ad ut totam facilis quaerat
             voluptate perspiciatis eligendi quo amet quibusdam, iusto dolorum ea
@@ -51,23 +52,23 @@
         </div>
       </div>
       <div class="row">
-        <div class="col">
+        <div class="col mx-auto text-center">
           <h3>Promotions</h3>
-          <p>
+          <p class="mx-auto text-center">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione
             dolor necessitatibus, vitae officia esse maxime, natus beatae
             similique ab mollitia obcaecati ut veritatis cum quod animi
             perferendis eum fugiat! Hic?
           </p>
           <h3>How To Do This</h3>
-          <p>
+          <p class="mx-auto text-center">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione
             dolor necessitatibus, vitae officia esse maxime, natus beatae
             similique ab mollitia obcaecati ut veritatis cum quod animi
             perferendis eum fugiat! Hic?
           </p>
         </div>
-        <div class="col">
+        <div class="col mx-auto text-center">
           <h3>Options</h3>
           <img
             class="img"
@@ -83,9 +84,7 @@
   </div>
 </template>
 <style scoped>
-#about {
-  padding: 120px;
-}
+
 p {
   width: 300px;
 }
@@ -101,7 +100,7 @@ p {
 .img {
   height: 400px;
   width: 300px;
-  padding-left: 20px;
+  /* padding-left: 20px; */
 }
 img {
   height: 290px;
@@ -111,5 +110,12 @@ img {
 
 .col {
     margin:  10px;
+}
+@media screen and (max-width:768px){
+  .vr{
+    padding:0px;
+    background-color: var(--color-);
+  }
+  
 }
 </style>

@@ -17,14 +17,15 @@ footer{
     margin-bottom:0px;
     /* padding-bottom:10px; */
     height:50px;
-    background-color:rgb(153, 153, 153);
+    background-color:rgba(174, 174, 174, 0.778);
+    /* box-shadow:5px rgb(148, 148, 148); */
 }
 p{
   margin-bottom:0px;
 }
 @media screen and (max-width:570px){
   footer{
-    width:100%
+    max-width:100%
   }
 }
 </style>

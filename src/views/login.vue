@@ -1,8 +1,8 @@
 <template>
   <section id="login">
     <div class="container">
-      <div class="row vh-100 d-flex justify-content-center align-content-center">
-        <form class="w-75 shadow p-3">
+      <div class="row d-flex justify-content-center align-content-center">
+        <form class="shadow p-3">
           <h2 class="p-3 text-center">Login Page</h2>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label"
@@ -69,8 +69,16 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 form {
   /* padding-top: 70px; */
+}
+.row{
+  height:400px;
+  width:700px;
+}
+.container{
+  padding-bottom:40px;
+  padding-top:40px
 }
 </style>

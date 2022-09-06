@@ -1,22 +1,49 @@
 <template>
-  <nav class="navbar navbar-expand  bg-light">
+  <nav class="navbar navbar-expand">
     <div class="container-fluid">
-      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <img
+            src="https://i.postimg.cc/Y94tKXzc/Screenshot-2022-08-25-114500-3-removebg-preview.png"
+          />
+          
       <button
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse w-100 justify-content-center" id="navbarNav">
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNav"
+      >
         <ul class="navbar-nav">
-          <!-- <div class=""> -->
+          
+          <div class="d-flex" v-if="user">
+            <!-- <li class="nav-item">
+              <router-link to="/">
+                <img
+                src="https://i.postimg.cc/Y94tKXzc/Screenshot-2022-08-25-114500-3-removebg-preview.png"
+                />
+              </router-link>
+            </li> -->
+
+            <li class="nav-item">
+              <router-link to="/cart">
+                <a class="nav-link"><i class="bi bi-cart2 m-1"></i>𝙲𝚊𝚛𝚝</a>
+              </router-link>
+            </li>
+
+            <li class="nav-item">
+              <router-link to="/">
+                <a class="nav-link" @click="logout"
+                  ><i class="bi bi-box-arrow-right"></i>𝙻𝚘𝚐𝚘𝚞𝚝</a
+                >
+              </router-link>
+            </li>
+          </div>
+          <div class="d-flex" v-else>
             <li class="nav-item">
               <router-link to="/login">
                 <a class="nav-link"><i class="bi bi-person"></i>𝙻𝚘𝚐𝚒𝚗 </a>
@@ -24,24 +51,10 @@
             </li>
             <li class="nav-item">
               <router-link to="/register">
-                <a class="nav-link"><i class="bi bi-person"></i>Register </a>
+                <a class="nav-link"><i class="bi bi-person"></i>𝚁𝚎𝚐𝚒𝚜𝚝𝚎𝚛 </a>
               </router-link>
             </li>
-          <!-- </div> -->
-
-          <li class="nav-item">
-            <router-link to="/">
-              <img
-                src="https://i.postimg.cc/Y94tKXzc/Screenshot-2022-08-25-114500-3-removebg-preview.png"
-              />
-            </router-link>
-          </li>
-
-          <li class="nav-item">
-            <router-link to="/cart">
-              <a class="mx-3"><i class="bi bi-cart2 m-1"></i>𝙲𝚊𝚛𝚝</a>
-            </router-link>
-          </li>
+          </div>
         </ul>
       </div>
     </div>
@@ -63,26 +76,31 @@
         />
       </div>
       <div class="col my-auto lead text-end"> -->
-        <!-- <router-link to="/wishlist">
+  <!-- <router-link to="/wishlist">
         <a><i class="bi bi-heart m-1"></i>𝚆𝚒𝚜𝚑  𝙻𝚒𝚜𝚝</a>
       </router-link> -->
-        <!-- <router-link to="/cart">
+  <!-- <router-link to="/cart">
           <a class="mx-3"><i class="bi bi-cart2 m-1"></i>𝙲𝚊𝚛𝚝</a>
         </router-link>
       </div> -->
 
-      <!-- <button class="btn" @click="logout">
+  <!-- <button class="btn" @click="logout">
         logout
       </button> -->
-      <!-- <router-link :to="name='contact'">
+  <!-- <router-link :to="name='contact'">
           <a> contact </a>
       </router-link> -->
-    <!-- </div>
+  <!-- </div>
   </div> -->
 </template>
 
 <script>
 export default {
+  computed: {
+    user() {
+      return this.$store.state.user;
+    },
+  },
   methods: {
     logout() {
       this.$store.state.token = null;
@@ -96,9 +114,9 @@ export default {
 
 <style scoped>
 .container {
-  /* height:100px; */
+  /* height:70px; */
   max-width: 100%;
-  background-color: rgba(121, 121, 121, 0.082);
+  /* background-color: rgb(0, 0, 0); */
   background-size: cover;
   --bs-gutter-x: 0rem;
   position: fixed;
@@ -110,20 +128,26 @@ a {
   text-decoration: none;
   color: rgb(94, 93, 93);
   /* text-decoration-line:unset; */
-  font-size: 23px;
+  font-size: 20px;
   font-weight: bold;
-  margin: auto;
+  /* margin: auto; */
+}
+a:hover {
+  color: rgb(208, 88, 88);
+
 }
 img {
-  padding-top: 10px;
+  margin-top: 10px;
   height: 70px;
   width: 230px;
+  margin-left:43%;
+  /* margin-right:auto; */
 }
-.right {
-  display: flex;
-  justify-content: flex-end;
+nav{
+  background-color: rgba(224, 221, 221, 0.558);
+  height:70px;
 }
-.row {
+/* .row {
   height: 60px;
   max-width: 100%;
   background-size: cover;
@@ -132,5 +156,5 @@ img {
   background-color: var(--color-);
   padding: 0px;
   border-radius: 0;
-}
+} */
 </style>

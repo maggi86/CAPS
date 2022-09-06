@@ -16,7 +16,7 @@
 
 <style scoped>
 .card{
-  margin-top:50px;
+  /* margin-top:50px; */
   min-height: fit-content;
   width: 100%; 
   /* height:auto; */
@@ -41,7 +41,7 @@ height:100vh;
 .container{
     max-width: 100%;
     background-color:rgb(173, 173, 173);
-    padding-top:20px;
+    /* padding-top:20px; */
 }
 img{
     /* margin-top:5%; */

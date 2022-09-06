@@ -30,4 +30,9 @@ Nav {
 /* Footer{
   width:100%
 } */
+@media screen and (max-width:573px){
+  footer{
+    width:100%
+  }
+}
 </style>
