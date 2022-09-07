@@ -94,20 +94,26 @@ p {
   background-color: rgb(108, 104, 104);
   padding: 1px;
 }
+.row{
+  margin-top:20px;
+}
 /* .col2{
     width:300px;
 } */
 .img {
-  height: 400px;
-  width: 300px;
-  /* padding-left: 20px; */
+  height: 380px;
+  width: 280px;
+  margin-left: 20px;
 }
 img {
   height: 290px;
   width: 300px;
   aspect-ratio: 1;
 }
-
+.container{
+  padding-top:30px;
+  padding-bottom:30px
+}
 .col {
     margin:  10px;
 }

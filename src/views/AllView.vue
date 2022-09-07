@@ -4,9 +4,9 @@
     <div v-if="prods">
       <div class="container pt-3">
         <div class="row p-3 m-3">
-          <h2>filters & Sort</h2>
+          <h2>𝙵𝚒𝚕𝚝𝚎𝚛𝚜 & 𝚂𝚘𝚛𝚝</h2>
           <div class="col-md-3">
-            <label for="exampleInputEmail1" class="form-label"
+            <label class="form-label"
               >Search by name:</label
             >
             <input
@@ -17,7 +17,7 @@
             />
           </div>
           <div class="col-md-3">
-            <label for="exampleInputEmail1" class="form-label"
+            <label class="form-label"
               >Sort by name:</label
             >
             <select
@@ -43,8 +43,8 @@
               v-model="price"
             >
               <option value="All" selected disabled>Sort By Price</option>
-              <option value="asc">Poor to Rich</option>
-              <option value="desc">Rich to Poor</option>
+              <option value="asc">Higher Prices</option>
+              <option value="desc">Lower Prices</option>
             </select>
           </div>
 
@@ -181,6 +181,17 @@ export default {
   background-repeat: no-repeat;
   padding-bottom: 20px;
   /* background-position: center; */
+}
+h2{
+  color: rgb(94, 93, 93);
+  /* font-family:monospace; */
+  font-weight: bold
+}
+label{
+  color: rgb(94, 93, 93);
+}
+input{
+  width:300px
 }
 /* .container{
     margin: 0;
