@@ -124,6 +124,11 @@ export default {
   /* padding-top: 170px; */
   min-height: 100vh;
 }
+
+.card {
+  min-width: fit-content;
+}
+
 .btn{
   background-color:black
 }

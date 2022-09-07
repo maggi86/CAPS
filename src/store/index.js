@@ -9,6 +9,7 @@ export default createStore({
     cart: null,
     token: null || localStorage.getItem("token"),
     admin: false,
+    msg : null,
     me: false,
   },
   getters: {},
@@ -112,7 +113,13 @@ export default createStore({
           context.dispatch("getProds");
         });
     },
-
+    getUsers: (context) => {
+      fetch("http://localhost:7001/users")
+        .then((res) => res.json())
+        .then((data) => {
+          context.commit("setUsers", data.results);
+        });
+    },
     // login
     login: (context, payload) => {
       fetch("http://localhost:7001/users", {
@@ -197,9 +204,11 @@ export default createStore({
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
-            // if (data != null) {
-            //   context.commit("setCart", JSON.parse(data));
-            // }
+            if (data != null) {
+              context.state.msg = data.msg
+              // context.commit("setCart", JSON.parse(data));
+              context.dispatch('getCart')
+            }
           });
       }
     },

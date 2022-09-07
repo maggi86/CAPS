@@ -30,19 +30,14 @@
               id="exampleInputPassword1"
             />
           </div>
-          <div class="mb-3 form-check">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              id="exampleCheck1"
-            />
-            <label class="form-check-label" for="exampleCheck1"
-              >Check me out</label
-            >
-          </div>
+         
           <button type="button" @click="login" class="btn btn-primary">
             Submit
           </button>
+        
+          <div v-if="msg">
+            {{msg}}
+          </div>
         </form>
       </div>
     </div>
@@ -56,6 +51,11 @@ export default {
       email: "",
       password: "",
     };
+  },
+  computed: {
+    msg() {
+      return this.$store.state.msg
+    }
   },
   methods: {
     login() {

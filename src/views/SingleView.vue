@@ -13,6 +13,9 @@
               <p>{{prod.catergory}}</p>
               <p>{{prod.price}}</p>
               <button @click="add" class="btn">add to cart</button>
+              <div v-if="msg">
+                {{msg}}
+              </div>
             </div>
           </div>
         </div>
@@ -29,6 +32,10 @@ export default {
     
     prod() {
       return this.$store.state.prod;
+    },
+
+    msg() {
+      return this.$store.state.msg;
     },
   },
   mounted() {

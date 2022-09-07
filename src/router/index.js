@@ -64,6 +64,12 @@ const routes = [
     component: () =>
       import("../views/cart.vue"),
   },
+  {
+    path: "/profile",
+    name: "profile",
+    component: () =>
+      import("../views/profile.vue"),
+  }
 ];
 
 const router = createRouter({

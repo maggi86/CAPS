@@ -1,7 +1,11 @@
 <template>
   <nav class="navbar navbar-expand">
     <div class="container-fluid">
-      <img
+      <router-link to="/profile">
+        <img src="https://i.postimg.cc/j5FpNC5V/istockphoto-508704980-612x612-removebg-preview-1.png" id="img">
+      </router-link>
+      
+      <img id="logo"
             src="https://i.postimg.cc/Y94tKXzc/Screenshot-2022-08-25-114500-3-removebg-preview.png"
           />
           
@@ -124,6 +128,13 @@ export default {
   overflow: hidden;
   /* margin-left:20px */
 }
+#img{
+  height:70px;
+  width:70px;
+  aspect-ratio:1;
+  margin-top:0px;
+  margin-left:1%;
+}
 a {
   text-decoration: none;
   color: rgb(94, 93, 93);
@@ -140,8 +151,11 @@ img {
   margin-top: 10px;
   height: 70px;
   width: 230px;
-  margin-left:43%;
+  /* margin-left:4%; */
   /* margin-right:auto; */
+}
+#logo{
+  margin-left:36%;
 }
 nav{
   background-color: rgba(224, 221, 221, 0.558);
@@ -157,4 +171,12 @@ nav{
   padding: 0px;
   border-radius: 0;
 } */
+@media screen and (max-width:573px){
+  a{
+    font-size:15px;
+  }
+  img{
+    margin-left:10%;
+  }
+}
 </style>
