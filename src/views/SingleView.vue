@@ -11,14 +11,16 @@
             <div>
               <p>{{prod.description}}</p>
               <p>{{prod.catergory}}</p>
-              <p>{{prod.price}}</p>
+              <p>R{{prod.price}}.00</p>
               <button @click="add" class="btn">add to cart</button>
               <div v-if="msg">
-                {{msg}}
-              </div>
+              {{msg}}</div>
             </div>
           </div>
         </div>
+      </div>
+      <div v-else>
+        <Loader/>
       </div>
     </div>
   </div>
@@ -26,7 +28,11 @@
 </template>
 
 <script>
-export default {
+  import Loader from "@/components/load.vue"
+export default{
+  components:{
+    Loader
+  },
   props: ["id"],
   computed: {
     
@@ -40,6 +46,7 @@ export default {
   },
   mounted() {
     this.$store.dispatch("getProd", this.id);
+    this.$store.commit("setProd", null)
   },
   methods: {
      add() {
@@ -78,6 +85,7 @@ export default {
     height:auto; 
     padding-top:0px;
   }
+
   @media screen and (max-width:576px){
     img{
     width:300px

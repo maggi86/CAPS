@@ -7,18 +7,18 @@
           <h2>𝙵𝚒𝚕𝚝𝚎𝚛𝚜 & 𝚂𝚘𝚛𝚝</h2>
           <div class="col-md-3">
             <label class="form-label"
-              >Search by name:</label
+              >𝚂𝚎𝚊𝚛𝚌𝚑 𝙱𝚢 𝙽𝚊𝚖𝚎:</label
             >
             <input
               v-model="search"
               type="text"
               class="form-control"
-              placeholder="Search by Name:"
+              placeholder="𝚂𝚘𝚛𝚝 𝙱𝚢 𝙽𝚊𝚖𝚎:"
             />
           </div>
           <div class="col-md-3">
             <label class="form-label"
-              >Sort by name:</label
+              >𝚂𝚘𝚛𝚝 𝙱𝚢 𝙽𝚊𝚖𝚎 :</label
             >
             <select
               class="form-select"
@@ -27,14 +27,14 @@
               v-model="name"
               @change="sortName"
             >
-              <option value="All" selected disabled>Sort By Name</option>
-              <option value="asc">A-Z</option>
-              <option value="desc">Z-A</option>
+              <option value="All" selected disabled>𝚂𝚘𝚛𝚝 𝙱𝚢 𝙽𝚊𝚖𝚎</option>
+              <option value="asc">𝙰-𝚉</option>
+              <option value="desc">𝚉-𝙰</option>
             </select>
           </div>
 
           <div class="col-md-3">
-            <label class="form-label">Sort by price:</label>
+            <label class="form-label">𝚂𝚘𝚛𝚝 𝙱𝚢 𝙿𝚛𝚒𝚌𝚎:</label>
             <select
               class="form-select"
               name="price"
@@ -42,27 +42,27 @@
               @change="sortPrice"
               v-model="price"
             >
-              <option value="All" selected disabled>Sort By Price</option>
-              <option value="asc">Higher Prices</option>
-              <option value="desc">Lower Prices</option>
+              <option value="All" selected disabled>𝚂𝚘𝚛𝚝 𝙱𝚢 𝙿𝚛𝚒𝚌𝚎</option>
+              <option value="asc">𝙷𝚒𝚐𝚑𝚎𝚛 𝙿𝚛𝚒𝚌𝚎𝚜</option>
+              <option value="desc">𝙻𝚘𝚠𝚎𝚛 𝙿𝚛𝚒𝚌𝚎𝚜</option>
             </select>
           </div>
 
           <div class="col-md-3">
-            <label class="form-label">Filter by type:</label>
+            <label class="form-label">𝙵𝚒𝚕𝚝𝚎𝚛 𝙱𝚢 𝚃𝚢𝚙𝚎:</label>
             <select
               class="form-select"
               name="category"
               id="category"
               v-model="category"
             >
-              <option value="All" selected disabled>Filter By Type</option>
-              <option value="All">All</option>
-              <option value="rings">Rings</option>
-              <option value="piercings">Piercings</option>
-              <option value="earrings">Earings</option>
-              <option value="necklace">Necklaces</option>
-              <option value="waistbands">Waistbands</option>
+              <option value="All" selected disabled>𝙵𝚒𝚕𝚝𝚎𝚛 𝙱𝚢 𝚃𝚢𝚙𝚎</option>
+              <option value="All">𝙰𝚕𝚕</option>
+              <option value="rings">𝚁𝚒𝚗𝚐𝚜</option>
+              <option value="piercings">𝙿𝚒𝚎𝚛𝚌𝚒𝚗𝚐𝚜</option>
+              <option value="earrings">𝙴𝚊𝚛𝚛𝚒𝚗𝚐𝚜</option>
+              <option value="necklace">𝙽𝚎𝚌𝚔𝚕𝚊𝚌𝚎𝚜</option>
+              <option value="waistbands">𝚆𝚊𝚒𝚜𝚝𝚋𝚊𝚗𝚍𝚜</option>
             </select>
           </div>
         </div>
@@ -74,23 +74,28 @@
         </div>
       </div>
     </div>
+    <div v-else>
+      <Loader/>
+    </div>
   </section>
 </template>
 
 <script>
+import Loader from "@/components/load.vue"
 import All from "@/components/products.vue";
 import Lower from "@/components/lowerNavbar.vue";
 export default {
   components: {
     All,
     Lower,
+    Loader
   },
   data() {
     return {
       search: "",
       price: "All",
       name: "All",
-      search: "",
+      // search: "",
       category: "All",
     };
   },
@@ -173,7 +178,7 @@ export default {
   /* padding-top: 120px; */
   background-color: rgb(0, 0, 0);
   /* background-image: url("https://i.postimg.cc/prJ4kz5Z/53dd9d731f48f1f1acf0df8a57e07b45.jpg"); */
-  background-image: url("https://i.postimg.cc/k45Qxd4M/aesthetic-stars-gif-png-largest-wallpaper-portal.gif");
+  background-image: url("https://i.postimg.cc/6p8rfFFR/transparent-background-gif-transparent-Favim-com-7255762.gif");
   background-attachment: fixed;
   background-size: cover;
   -moz-background-size: cover;
@@ -213,11 +218,7 @@ input{
   /* column-gap: 15px; */
   --bs-gutter-x: 0px;
 }
-.row {
-  /* display:flex;
-flex-wrap:wrap;
- max-width: 100%; */
-}
+
 @media screen and (max-width: 1000px) {
   .cols {
     column-count: 3;

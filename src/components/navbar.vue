@@ -53,11 +53,6 @@
                 <a class="nav-link"><i class="bi bi-person"></i>𝙻𝚘𝚐𝚒𝚗 </a>
               </router-link>
             </li>
-            <li class="nav-item">
-              <router-link to="/register">
-                <a class="nav-link"><i class="bi bi-person"></i>𝚁𝚎𝚐𝚒𝚜𝚝𝚎𝚛 </a>
-              </router-link>
-            </li>
           </div>
         </ul>
       </div>
@@ -144,7 +139,7 @@ a {
   /* margin: auto; */
 }
 a:hover {
-  color: rgb(208, 88, 88);
+  color: rgb(45, 45, 45);
 
 }
 img {
@@ -158,7 +153,7 @@ img {
   margin-left:36%;
 }
 nav{
-  background-color: rgba(224, 221, 221, 0.558);
+  background-color: rgba(224, 221, 221, 0);
   height:70px;
 }
 /* .row {

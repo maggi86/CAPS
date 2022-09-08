@@ -7,19 +7,14 @@
             <div class="card m-3" v-for="item in cart" :key="item">
               <div class="row">
                 <div class="col-md-4">
-                  <!-- img -->
                   <img :src="item.img" class="img-fluid" alt="" />
                 </div>
                 <div class="col-md-4">
-                  <!-- namw -->
                   <p>{{ item.title }}</p>
-                  <!-- description -->
                   <p>{{ item.description }}</p>
                 </div>
                 <div class="col-md-4">
-                  <!-- price -->
-                  {{ item.price }}
-                  <!-- quantitiy -->
+                  <p>{{ item.price }}</p>
                 </div>
               </div>
             </div>
@@ -37,7 +32,7 @@
                   >
                     <div class="col-md-6">
                       <p>
-                        <span class="">{{ item.title }}</span>
+                        <span>{{ item.title }}</span>
                       </p>
                     </div>
                     <div class="col-md-4">
@@ -46,9 +41,7 @@
                       </p>
                     </div>
                     <div class="col-md-2 mx-auto">
-                      <!-- <p>
-                      <span>R{{ item.price }}.00</span>
-                    </p> -->
+                      
                       <a
                         class="btn"
                         @click="this.$store.dispatch('deleteItem', item.itemid)"
@@ -84,13 +77,17 @@
       </div>
     </div>
     <div v-else>
-      <h2>Cart Empty</h2>
+      <Loader/>
     </div>
   </section>
 </template>
 
 <script>
-export default {
+  import Loader from "@/components/load.vue"
+export default{
+  components:{
+    Loader
+  },
   computed: {
     cart() {
       return this.$store.state.cart;
@@ -129,7 +126,17 @@ export default {
   min-width: fit-content;
 }
 
+/* i{
+  color:rgb(4, 4, 4)
+} */
 .btn{
-  background-color:black
+  background-color:rgb(255, 255, 255);
+  border-color:rgb(210, 14, 70);
+  font-weight:bold;
+  color:rgb(210, 14, 70);
+}
+.btn:hover{
+  background-color:rgb(210, 14, 70);
+  color:white;
 }
 </style>

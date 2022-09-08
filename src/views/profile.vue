@@ -6,7 +6,9 @@
           <img
             src="https://i.postimg.cc/j5FpNC5V/istockphoto-508704980-612x612-removebg-preview-1.png"
           />
-          <h3>{{ user.fname }}</h3>
+          </div>
+          <div class="row mx-auto text-center">
+          <h2>{{ user.fname }}</h2>
         </div>
         <div class="row">
           <div class="col">
@@ -45,12 +47,19 @@
           </div>
         </div>
       </div>
+      <div v-else>
+        <Loader/>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
+  import Loader from "@/components/load.vue"
+export default{
+  components:{
+    Loader
+  },
   computed: {
     user() {
       return this.$store.state.user;

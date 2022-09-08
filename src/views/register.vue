@@ -2,31 +2,31 @@
   <section id="register">
     <div class="container">
       <div
-        class="row vh-100 d-flex justify-content-center align-content-center"
+        class="row justify-content-center align-content-center"
       >
-        <form class="w-75 shadow p-3">
-          <h2 class="p-3 text-center">Register Page</h2>
+        <form class="shadow p-3">
+          <h2 class="p-3 text-center">𝚁𝚎𝚐𝚒𝚜𝚝𝚎𝚛 𝙿𝚊𝚐𝚎</h2>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Name :</label>
+            <label class="form-label">𝙽𝚊𝚖𝚎 :</label>
             <input v-model="fname" type="text" class="form-control" />
           </div>
 
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label"
-              >Email address</label
+              >𝙴𝚖𝚊𝚒𝚕 𝙰𝚍𝚍𝚛𝚎𝚜𝚜 :</label
             >
             <input v-model="email" type="email" class="form-control" />
           </div>
 
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
-              >Password</label
+            <label class="form-label"
+              >𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍</label
             >
             <input v-model="password" type="password" class="form-control" />
           </div>
 
-          <button type="button" @click="register" class="btn btn-primary">
-            Submit
+          <button type="button" @click="register" class="btn ">
+            𝚂𝚞𝚋𝚖𝚒𝚝
           </button>
         </form>
       </div>
@@ -58,6 +58,24 @@ export default {
 
 <style scoped>
 form {
-  /* padding-top:70px */
+  margin-top:60px;
+  width:600px;
+  /* height:500px */
+  margin-bottom:60px;
+}
+#register{
+  height:80vh
+}
+label ,.btn , h2{
+  font-weight:bold
+}
+.btn{
+  background-color:gray;
+  color:white;
+  width:200px
+}
+.btn:hover{
+  background-color:var(--color-);
+  color:black;
 }
 </style>

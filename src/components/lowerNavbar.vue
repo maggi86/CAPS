@@ -22,10 +22,14 @@
             <a class="nav-link">𝙿𝚛𝚘𝚍𝚞𝚌𝚝𝚜 </a>
         </router-link>    
         </li>
-        <li class="nav-item">  <router-link to="/admin">
+        <div v-if="admin">
+          <li class="nav-item">  
+            <router-link to="/admin">
             <a class="nav-link"> 𝙰𝚍𝚖𝚒𝚗 </a>
-        </router-link>
+            </router-link>
         </li>
+      </div>
+        
       </ul>
     </div>
   </div>
