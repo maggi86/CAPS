@@ -3,10 +3,9 @@
     <div class="container">
       <div v-if="user">
         <div class="row mx-auto justify-content-center">
-          <img
-            src="https://i.postimg.cc/j5FpNC5V/istockphoto-508704980-612x612-removebg-preview-1.png"
-          />
+          <img :src="user.profile" class="user" alt="..."/>
           </div>
+          <!-- https://i.postimg.cc/pd0mPrhg/alp-ancel-WKQt-X-SKFI-unsplash.jpg -->
           <div class="row mx-auto text-center">
           <h2>{{ user.fname }}</h2>
         </div>

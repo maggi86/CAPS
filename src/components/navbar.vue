@@ -1,29 +1,28 @@
 <template>
-  <nav class="navbar navbar-expand">
+  <nav class="navbar navbar-expand"> 
     <div class="container-fluid">
-      <router-link to="/profile">
-        <img src="https://i.postimg.cc/j5FpNC5V/istockphoto-508704980-612x612-removebg-preview-1.png" id="img">
-      </router-link>
-      
-      <img id="logo"
-            src="https://i.postimg.cc/Y94tKXzc/Screenshot-2022-08-25-114500-3-removebg-preview.png"
-          />
-          
+      <!-- <div v-if="user"> -->
+        <router-link  to="/profile">
+          <img v-if="user" :src="user.profile" class="user" style="height:70px; width:70px" />
+        </router-link>
+      <!-- </div> -->
+
+      <img
+        class="logo"
+        src="https://i.postimg.cc/Y94tKXzc/Screenshot-2022-08-25-114500-3-removebg-preview.png"
+      />
+
       <button
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"><i class="bi bi-list"></i> </span>
       </button>
 
-      <div
-        class="collapse navbar-collapse justify-content-end"
-        id="navbarNav"
-      >
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          
           <div class="d-flex" v-if="user">
             <!-- <li class="nav-item">
               <router-link to="/">
@@ -94,12 +93,13 @@
 </template>
 
 <script>
-export default {
+export default{
   computed: {
     user() {
       return this.$store.state.user;
     },
   },
+
   methods: {
     logout() {
       this.$store.state.token = null;
@@ -123,13 +123,19 @@ export default {
   overflow: hidden;
   /* margin-left:20px */
 }
-#img{
+.user{
   height:70px;
-  width:70px;
+  width:73px;
   aspect-ratio:1;
   margin-top:0px;
-  margin-left:1%;
 }
+/* #img {
+  height: 70px;
+  width: 70px;
+  aspect-ratio: 1;
+  margin-top: 0px;
+  margin-left: 1%;
+} */
 a {
   text-decoration: none;
   color: rgb(94, 93, 93);
@@ -139,22 +145,26 @@ a {
   /* margin: auto; */
 }
 a:hover {
-  color: rgb(45, 45, 45);
-
+  color: rgb(210, 14, 70);
+}
+span{
+  color:white
 }
 img {
   margin-top: 10px;
   height: 70px;
   width: 230px;
   /* margin-left:4%; */
+  border-width:1px;
+  border-radius: 50%;
   /* margin-right:auto; */
 }
-#logo{
-  margin-left:36%;
+.logo {
+  margin-left: 36%;
 }
-nav{
+nav {
   background-color: rgba(224, 221, 221, 0);
-  height:70px;
+  height: 70px;
 }
 /* .row {
   height: 60px;
@@ -166,12 +176,46 @@ nav{
   padding: 0px;
   border-radius: 0;
 } */
-@media screen and (max-width:573px){
-  a{
-    font-size:15px;
-  }
-  img{
-    margin-left:10%;
+@media screen and (max-width:950px){
+  .logo{
+    margin-left:30%
   }
 }
+@media screen and (max-width: 735px) {
+  a {
+    font-size: 15px;
+  }
+  .logo {
+    margin-left: 20%;
+  }
+}
+@media screen and (max-width:595px){
+  .logo{
+    margin-left: 15%;
+  }
+  img{
+    height: 60px;
+  width: 180px;
+  }
+}
+@media screen and (max-width:495px){
+  .logo{
+    margin-left: 10%;
+  }
+  img{
+    height: 50px;
+  width: 160px;
+  }
+  #img{
+    height:60px;
+    width:60px
+  }
+}
+@media screen and (max-width:350px){
+  .logo{
+    height:0px;
+    width:0px;
+  }
+}
+
 </style>

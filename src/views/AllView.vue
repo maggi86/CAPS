@@ -9,7 +9,7 @@
             <label class="form-label"
               >𝚂𝚎𝚊𝚛𝚌𝚑 𝙱𝚢 𝙽𝚊𝚖𝚎:</label
             >
-            <input
+            <input id="search"
               v-model="search"
               type="text"
               class="form-control"
@@ -178,7 +178,7 @@ export default {
   /* padding-top: 120px; */
   background-color: rgb(0, 0, 0);
   /* background-image: url("https://i.postimg.cc/prJ4kz5Z/53dd9d731f48f1f1acf0df8a57e07b45.jpg"); */
-  background-image: url("https://i.postimg.cc/6p8rfFFR/transparent-background-gif-transparent-Favim-com-7255762.gif");
+  /* background-image: url("https://i.postimg.cc/6p8rfFFR/transparent-background-gif-transparent-Favim-com-7255762.gif"); */
   background-attachment: fixed;
   background-size: cover;
   -moz-background-size: cover;
@@ -229,6 +229,11 @@ input{
   .cols {
     column-count: 2;
     /* column-gap:10px; */
+  }
+}
+@media screen and (max-width: 405px) {
+  input{
+    width:200px
   }
 }
 </style>

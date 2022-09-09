@@ -17,7 +17,7 @@
 <style scoped>
 .card{
   /* margin-top:50px; */
-  min-height: fit-content;
+  min-height: 80vh;
   width: 100%; 
   /* height:auto; */
   /* margin-left: ; */

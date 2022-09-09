@@ -1,14 +1,15 @@
 <template>
   <div id="admin">
-    <div class="container text-center p-5">
-      <h2 class="text-center">Products Table</h2>
+    <div class="container text-center ">
+      <h2 class="text-center">𝙿𝚛𝚘𝚍𝚞𝚌𝚝 𝚃𝚊𝚋𝚕𝚎</h2>
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">#id</th>
-            <th scope="col">title</th>
-            <th scope="col">Category</th>
-            <th scope="col">Price</th>
+            <th scope="col">#𝙸𝚍</th>
+            <th scope="col" id="image">𝙸𝚖𝚊𝚐𝚎</th>
+            <th scope="col">𝚃𝚒𝚝𝚕𝚎 </th>
+            <th scope="col">𝙲𝚊𝚝𝚎𝚐𝚘𝚛𝚢</th>
+            <th scope="col">𝙿𝚛𝚒𝚌𝚎</th>
             <th scope="col"> <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <i class="fa-regular fa-square-plus"></i>
             </a>
@@ -18,7 +19,8 @@
         <tbody v-if="prods">
           <tr v-for="prod in prods" :key="prod.id">
             <td>{{ prod.id }}</td>
-            <td>{{ prod.title }}</td>
+            <td id="image"><img :src="prod.img" class="img-fluid" alt="..."/></td>
+            <td>{{ prod.title}}</td>
             <td>{{ prod.catergory }}</td>
             <td>R{{ prod.price }}.00</td>
             <td>
@@ -63,5 +65,24 @@ export default {
 <style scoped>
   #admin{
     padding-top:50px;
+  }
+
+  img{
+    width:150px;
+  }
+  @media screen and (max-width:495px){
+    #image{
+      font-size:0px;
+      height:0px;
+      width:0px;
+    }
+  } 
+  @media screen and (max-width:450px){
+    th{
+      font-size:10px;
+    }
+    td{
+      font-size:8px;
+    }
   }
 </style>

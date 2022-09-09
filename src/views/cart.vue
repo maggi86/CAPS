@@ -3,44 +3,44 @@
     <div v-if="cart">
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col">
             <div class="card m-3" v-for="item in cart" :key="item">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col">
                   <img :src="item.img" class="img-fluid" alt="" />
                 </div>
-                <div class="col-md-4">
+                <div class="col">
                   <p>{{ item.title }}</p>
                   <p>{{ item.description }}</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col">
                   <p>{{ item.price }}</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="row">
+        </div>
+            <div class="row2">
               <div class="col">
                 <div class="card mx-auto m-3 p-3 shadow">
-                  <h2><span>Cart Summary</span></h2>
+                  <h2><span class="h2">C</span>art Summary</h2>
                   <div
                     v-for="item in cart"
                     :key="item"
                     :item="item"
                     class="row"
                   >
-                    <div class="col-md-6">
+                    <div class="col">
                       <p>
                         <span>{{ item.title }}</span>
                       </p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col">
                       <p>
                         <span>R{{ item.price }}.00</span>
                       </p>
                     </div>
-                    <div class="col-md-2 mx-auto">
+                    <div class="col mx-auto">
                       
                       <a
                         class="btn"
@@ -72,22 +72,24 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
     <div v-else>
       <Loader/>
     </div>
+    <!-- modal  -->
+    <Checkout />
   </section>
 </template>
 
 <script>
   import Loader from "@/components/load.vue"
+import Checkout from "@/components/checkout.vue";
 export default{
   components:{
-    Loader
-  },
+    Loader,
+    Checkout
+},
   computed: {
     cart() {
       return this.$store.state.cart;
@@ -126,6 +128,17 @@ export default{
   min-width: fit-content;
 }
 
+.h2{
+  font-size:39px;
+  color:rgb(210, 14, 70);
+  font-weight:bolder;
+}
+.row2{
+  width:300px;
+}
+.row{
+  width:700px;
+}
 /* i{
   color:rgb(4, 4, 4)
 } */

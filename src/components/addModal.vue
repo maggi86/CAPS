@@ -10,7 +10,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+          <h5 class="modal-title" id="exampleModalLabel">𝙰𝚍𝚍 𝙿𝚛𝚘𝚍𝚞𝚌𝚝</h5>
           <button
             type="button"
             class="btn-close"
@@ -22,28 +22,28 @@
           <form>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label"
-                >Title :</label
+                ><span>𝚃</span>𝚒𝚝𝚕𝚎 :</label
               >
               <input v-model="title" type="text" class="form-control" />
             </div>
 
             <div class="mb-3">
-              <label class="form-label">Image URL</label>
+              <label class="form-label"><span>𝙸</span>𝚖𝚊𝚐𝚎 𝚄𝚁𝙻</label>
               <input v-model="img" type="text" class="form-control" />
             </div>
 
             <div class="mb-3">
-              <label class="form-label">Category</label>
+              <label class="form-label"><span>𝙲</span>𝚊𝚝𝚎𝚐𝚘𝚛𝚢</label>
               <input v-model="category" type="text" class="form-control" />
             </div>
 
             <div class="mb-3">
-              <label class="form-label">Description</label>
+              <label class="form-label"><span>𝙳</span>𝚎𝚜𝚌𝚛𝚒𝚙𝚝𝚒𝚘𝚗</label>
               <input v-model="description" type="text" class="form-control" />
             </div>
 
             <div class="mb-3">
-              <label class="form-label">Price</label>
+              <label class="form-label"><span>𝙿</span>𝚛𝚒𝚌𝚎</label>
               <input v-model="price" type="number" class="form-control" />
             </div>
           </form>
@@ -54,10 +54,10 @@
             class="btn btn-secondary"
             data-bs-dismiss="modal"
           >
-            Close
+          𝙲𝚕𝚘𝚜𝚎
           </button>
           <button type="button" @click="addProd" class="btn btn-primary" data-bs-dismiss="modal">
-            Add Product
+            𝙰𝚍𝚍 𝙿𝚛𝚘𝚍𝚞𝚌𝚝
           </button>
         </div>
       </div>
@@ -91,4 +91,13 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+  h5{
+    color:rgb(210, 14, 70);
+    font-weight:bold;
+  }
+  label{
+    font-weight:bold
+  }
+  
+</style>
