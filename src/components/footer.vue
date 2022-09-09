@@ -72,7 +72,7 @@
 footer {
   width: 100%;
   padding-top: 7px;
-  margin-bottom: 0px;
+  margin-top: 0px;
   /* padding-bottom:10px; */
   height: auto;
   background-color: rgba(174, 174, 174, 0.778);
@@ -102,7 +102,7 @@ h6 {
 a {
   margin-left: 0px;
   text-decoration: none;
-  color: rgb(74, 74, 74);
+  color: rgb(46, 46, 46);
 }
 a:hover {
   color: rgb(210, 14, 70);

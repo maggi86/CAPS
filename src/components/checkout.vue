@@ -41,7 +41,7 @@
 </template>
 
 <script>
-export default {
+export default{
     computed: {
     cart() {
       return this.$store.state.cart;

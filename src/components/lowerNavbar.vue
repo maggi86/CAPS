@@ -17,16 +17,6 @@
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/about">
-              <a class="nav-link"> 𝙰𝚋𝚘𝚞𝚝 </a>
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/contact">
-              <a class="nav-link">𝙲𝚘𝚗𝚝𝚊𝚌𝚝 𝚞𝚜 </a>
-            </router-link>
-          </li>
-          <li class="nav-item">
             <router-link to="/all">
               <a class="nav-link">𝙿𝚛𝚘𝚍𝚞𝚌𝚝𝚜 </a>
             </router-link>

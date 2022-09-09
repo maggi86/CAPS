@@ -2,7 +2,7 @@
   <section id="login">
     <div class="container">
       <div class="row mx-auto justify-content-center align-content-center">
-        <form class="shadow p-3">
+        <div class="shadow p-3">
           <h2 class="p-3 text-center">𝙻𝚘𝚐𝚒𝚗 𝙿𝚊𝚐𝚎</h2>
           <div class="mb-3">
             <label class="form-label"
@@ -32,16 +32,16 @@
               <span>𝙳𝚘𝚗𝚝 𝚑𝚊𝚟𝚎 𝚊𝚗 𝚊𝚌𝚌𝚘𝚞𝚗𝚝?
               𝚂𝚒𝚐𝚗-𝚞𝚙 𝚑𝚎𝚛𝚎</span>
             </router-link>
-            </div>
-         
-          <button type="button" @click="login" class="btn">
-            𝚂𝚞𝚋𝚖𝚒𝚝
-          </button>
-        
+          </div>
           <div v-if="msg">
             {{msg}}
           </div>
-        </form>
+        </div>
+        <div class="row mx-auto justify-content-center">
+            <button type="button" @click="login" class="btn">
+            𝚂𝚞𝚋𝚖𝚒𝚝
+            </button>
+      </div>
       </div>
     </div>
   </section>

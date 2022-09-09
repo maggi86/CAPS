@@ -1,7 +1,7 @@
 <template>
   <div id="admin">
     <div class="container text-center ">
-      <h2 class="text-center">𝙿𝚛𝚘𝚍𝚞𝚌𝚝 𝚃𝚊𝚋𝚕𝚎</h2>
+      <h2 class="text-center"><span class="h2">𝙿</span>𝚛𝚘𝚍𝚞𝚌𝚝 𝚃𝚊𝚋𝚕𝚎</h2>
       <table class="table table-hover">
         <thead>
           <tr>
@@ -18,7 +18,7 @@
         </thead>
         <tbody v-if="prods">
           <tr v-for="prod in prods" :key="prod.id">
-            <td>{{ prod.id }}</td>
+            <td id="id">{{ prod.id }}</td>
             <td id="image"><img :src="prod.img" class="img-fluid" alt="..."/></td>
             <td>{{ prod.title}}</td>
             <td>{{ prod.catergory }}</td>
@@ -66,7 +66,17 @@ export default {
   #admin{
     padding-top:50px;
   }
-
+  .h2{
+    color:rgb(210, 14, 70);
+    font-size:43px
+  }
+  th, #id{
+    color:rgb(210, 14, 70);
+    font-weight:bold
+  }
+  tr:hover{
+    background-color:rgba(255, 0, 72, 0.247)
+  }
   img{
     width:150px;
   }

@@ -21,29 +21,29 @@
         <div class="modal-body">
           <form>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label"
-                >Title :</label
+               <label for="exampleInputPassword1" class="form-label"
+                ><span>𝚃</span>𝚒𝚝𝚕𝚎 :</label
               >
               <input v-model="prod.title" type="text" class="form-control" />
             </div>
 
             <div class="mb-3">
-              <label class="form-label">Image URL</label>
+              <label class="form-label"><span>𝙸</span>𝚖𝚊𝚐𝚎 𝚄𝚁𝙻</label>
               <input v-model="prod.img" type="text" class="form-control" />
             </div>
 
             <div class="mb-3">
-              <label class="form-label">Category</label>
+              <label class="form-label"><span>𝙲</span>𝚊𝚝𝚎𝚐𝚘𝚛𝚢</label>
               <input v-model="prod.catergory" type="text" class="form-control" />
             </div>
 
             <div class="mb-3">
-              <label class="form-label">Description</label>
+              <label class="form-label"><span>𝙳</span>𝚎𝚜𝚌𝚛𝚒𝚙𝚝𝚒𝚘𝚗</label>
               <input v-model="prod.description" type="text" class="form-control" />
             </div>
 
             <div class="mb-3">
-              <label class="form-label">Price</label>
+              <label class="form-label"><span>𝙿</span>𝚛𝚒𝚌𝚎</label>
               <input v-model="prod.price" type="number" class="form-control" />
             </div>
           </form>
@@ -51,12 +51,12 @@
         <div class="modal-footer">
           <button
             type="button"
-            class="btn btn-secondary"
+            class="btn"
             data-bs-dismiss="modal"
           >
             Close
           </button>
-          <button type="button" @click="update" class="btn btn-primary" data-bs-dismiss="modal">
+          <button type="button" @click="update" class="btn" data-bs-dismiss="modal">
             Update Product
           </button>
         </div>
@@ -66,7 +66,7 @@
 </template>
 
 <script>
-export default {
+export default{
   props: ["prod"],
   methods: {
     update() {
@@ -76,4 +76,16 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+   h5{
+    color:rgb(210, 14, 70);
+    font-weight:bold;
+  }
+  label{
+    font-weight:bold
+  }
+  span{
+    color:rgb(210, 14, 70);
+    font-size:20px;
+  }
+</style>

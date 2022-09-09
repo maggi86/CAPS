@@ -4,7 +4,9 @@
       <div v-if="prod">
         <div class="row">
           <div class="col mx-auto text-center">
+            <figure>
             <img :src="prod.img"/>
+          </figure>
           </div>
           <div class="col my-auto mx-auto text-center">
             <h1>{{ prod.title}}</h1>
@@ -59,11 +61,16 @@ export default{
 </script>
 
 <style scoped>
-
+  #single{
+    padding-top:40px;
+    height:100vh;
+    padding-bottom:830px
+  }
   h1{
     font-size:40px;
     font-weight:bold;
     font-family: monospace;
+    color:rgb(210, 14, 70);
   }
   p{
     font-size:20px;
@@ -83,12 +90,27 @@ export default{
   img{
     width:500px; 
     height:auto; 
-    padding-top:0px;
+    padding-top:0px; 
+    padding-bottom:5px;
   }
-
+  .col figure{
+    position: absolute;
+    /* width: 0%; */
+    float:left;
+    animation: 2s slide ease-in-out;
+  }
+  @keyframes slide {
+    from {
+    transform: translateX(300%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+  }
   @media screen and (max-width:576px){
     img{
-    width:300px
+      margin-left:5px;
+    width:280px
   }
   }
 </style>

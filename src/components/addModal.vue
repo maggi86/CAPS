@@ -51,12 +51,12 @@
         <div class="modal-footer">
           <button
             type="button"
-            class="btn btn-secondary"
+            class="btn"
             data-bs-dismiss="modal"
           >
           𝙲𝚕𝚘𝚜𝚎
           </button>
-          <button type="button" @click="addProd" class="btn btn-primary" data-bs-dismiss="modal">
+          <button type="button" @click="addProd" class="btn" data-bs-dismiss="modal">
             𝙰𝚍𝚍 𝙿𝚛𝚘𝚍𝚞𝚌𝚝
           </button>
         </div>
@@ -66,7 +66,7 @@
 </template>
 
 <script>
-export default {
+export default{
   data() {
     return {
       title: "",
@@ -99,5 +99,9 @@ export default {
   label{
     font-weight:bold
   }
-  
+  span{
+    color:rgb(210, 14, 70);
+    font-size:20px;
+  }
+
 </style>

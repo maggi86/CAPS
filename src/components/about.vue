@@ -31,6 +31,9 @@
           <img
             src="https://i.postimg.cc/sDjnJCtj/Meagan-2.jpg"
           />
+          <img
+            src="https://i.postimg.cc/sDjnJCtj/Meagan-2.jpg"
+          />
         </div>
         <div class="vr my-auto" style="height: 200px; width: 1px"></div>
         <div class="col my-auto ">

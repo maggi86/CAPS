@@ -9,42 +9,79 @@
           <div class="row mx-auto text-center">
           <h2>{{ user.fname }}</h2>
         </div>
-        <div class="row">
-          <div class="col">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
-              minus id veniam laborum eaque porro autem reprehenderit at,
-              possimus eum, numquam soluta animi nemo blanditiis molestias
-              doloremque ea rem perferendis accusamus neque qui nobis omnis?
-              Rerum debitis, enim adipisci impedit quis facilis ea! Suscipit
-              eaque fuga nihil atque laboriosam, dolores consequuntur nobis
-              facere voluptatem ex accusantium id? Minus hic omnis, maiores at
-              reiciendis quae exercitationem quos adipisci placeat, ipsum quas
-              doloribus qui? Tempore, eligendi sed? Fuga, repudiandae libero?
-              Nisi laboriosam labore delectus aliquam, ea voluptas soluta, quia
-              quaerat autem officiis cupiditate repudiandae numquam
-              exercitationem nostrum doloribus, illum suscipit omnis
-              dignissimos!
-            </p>
-          </div>
-          <div class="col">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione
-              totam reprehenderit consequatur et dolor, ullam cumque,
-              dignissimos cum architecto quas corrupti neque nihil, placeat aut
-              eos quasi quo velit voluptate deserunt itaque repellat. Tempore
-              soluta fugiat autem aspernatur sequi obcaecati provident, dolor
-              doloremque. Error deleniti alias quidem maxime ratione ipsum
-              consequuntur provident accusamus incidunt? Fuga recusandae, quis
-              officia architecto rem odio dolor laboriosam! Eaque magnam fuga
-              maxime harum esse ipsam voluptatibus eveniet, laudantium eum
-              accusamus repellendus dignissimos, molestiae tenetur pariatur
-              cupiditate inventore animi quam quo cumque nisi hic ea doloribus?
-              Obcaecati sint expedita non maxime explicabo qui quod distinctio
-              modi!
-            </p>
-          </div>
-        </div>
+            <form class="my-auto">
+              <h2 class="text-center">𝙼𝚢 𝙳𝚎𝚝𝚊𝚒𝚕𝚜</h2>
+
+              <p class="text-center">
+                <button
+                  class="btn mt-5"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseExample"
+                  aria-expanded="false"
+                >
+                𝙴𝚍𝚒𝚝 𝚈𝚘𝚞𝚛 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗
+                </button>
+              </p>
+
+              <div class="collapse" id="collapseExample">
+                <div class="card border-0 card-body">
+                  <div class="mb-3">
+                    <label for="firstname" class="form-label"
+                      >𝙵𝚞𝚕𝚕𝚗𝚊𝚖𝚎 :</label
+                    >
+                    <input
+                      v-model="user.fname"
+                      type="text"
+                      class="form-control"
+                      placeholder="𝙴𝚗𝚝𝚎𝚛 𝚈𝚘𝚞𝚛 𝙵𝚞𝚕𝚕𝚗𝚊𝚖𝚎"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="surname" class="form-label"
+                      >𝙿𝚛𝚘𝚏𝚒𝚕𝚎 𝚄𝚁𝙻 :</label
+                    >
+                    <input
+                      v-model="user.profile"
+                      type="text"
+                      class="form-control"
+                      placeholder="𝙴𝚗𝚝𝚎𝚛 𝙸𝚖𝚊𝚐𝚎 𝚄𝚁𝙻"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label"
+                      >𝙴𝚗𝚝𝚎𝚛 𝙴𝚖𝚊𝚒𝚕 𝙰𝚍𝚍𝚛𝚎𝚜𝚜 :</label
+                    >
+                    <input
+                      v-model="user.email"
+                      type="email"
+                      class="form-control"
+                      placeholder="𝙴𝚗𝚝𝚎𝚛 𝚈𝚘𝚞𝚛 𝙴𝚖𝚊𝚒𝚕 𝙰𝚍𝚍𝚛𝚎𝚜𝚜"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    class="btn m-3"
+                    @click="this.$store.dispatch('editUser', user)"
+                  >
+                  𝚄𝚙𝚍𝚊𝚝𝚎 𝚄𝚜𝚎𝚛
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn"
+                    @click="this.$store.dispatch('deleteUser', user.id)"
+                  >
+                  𝙳𝚎𝚕𝚎𝚝𝚎 𝙰𝚌𝚌𝚘𝚞𝚗𝚝
+                  </button>
+                </div>
+              </div>
+            </form>
       </div>
       <div v-else>
         <Loader/>

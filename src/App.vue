@@ -27,9 +27,10 @@ Nav {
   position: fixed;
   /* margin-bottom:50px; */
 }
-/* Footer{
-  width:100%
-} */
+Footer{
+  position: relative;
+  margin-bottom: 0px;
+}
 @media screen and (max-width:573px){
   footer{
     width:100%

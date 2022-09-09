@@ -23,7 +23,7 @@
   /* margin-left: ; */
   /* margin-right: auto; */
   /* margin-top: 25%; */
-  box-shadow: 0px 15px 35px black;
+  /* box-shadow: 0px 15px 35px black; */
   /* background-color: black; */
   /* border-radius: 6px; */
   border-width:0;

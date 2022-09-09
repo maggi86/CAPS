@@ -196,7 +196,7 @@ label{
   color: rgb(94, 93, 93);
 }
 input{
-  width:300px
+  width:260px
 }
 /* .container{
     margin: 0;
