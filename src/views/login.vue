@@ -36,19 +36,20 @@
           <div v-if="msg">
             {{msg}}
           </div>
-        </div>
-        <div class="row mx-auto justify-content-center">
+          <div class="row mx-auto justify-content-center">
             <button type="button" @click="login" class="btn">
             𝚂𝚞𝚋𝚖𝚒𝚝
             </button>
       </div>
+        </div>
+        
       </div>
     </div>
   </section>
 </template>
 
 <script>
-export default {
+export default{
   data() {
     return {
       email: "",
@@ -73,12 +74,8 @@ export default {
 </script>
 
 <style scoped>
-
-.row{
-  height:400px;
-  width:600px;
-}
 #login{
+  margin-top:200px;
   height:80vh
 }
 form {
@@ -94,6 +91,7 @@ label ,.btn , h2{
   background-color:gray;
   color:white;
   width:200px;
+  height:40px
 }
 .btn:hover{
   background-color:var(--color-);
@@ -109,5 +107,20 @@ a{
 }
 .text{
   padding-bottom:10px;
+}
+@media screen and (max-width:767px){
+  .row {
+    width:500px
+  }
+}
+@media screen and (max-width:690px){
+  .row {
+    width:390px
+  }
+}
+@media screen and (max-width:430px){
+  .row {
+    width:280px
+  }
 }
 </style>

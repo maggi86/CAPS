@@ -4,6 +4,7 @@
       <!-- <div v-if="user"> -->
         <router-link  to="/profile">
           <img v-if="user" :src="user.profile" class="user" style="height:70px; width:70px" />
+          <img v-else :src="user.profile.null" class="user" style="height:70px; width:70px">
         </router-link>
       <!-- </div> -->
 

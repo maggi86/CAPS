@@ -64,14 +64,16 @@
                       required
                     />
                   </div>
+                  <div class="row mx-auto text-center">
                   <button
                     type="button"
-                    class="btn m-3"
+                    class="btn my-3"
                     @click="this.$store.dispatch('editUser', user)"
                   >
                   𝚄𝚙𝚍𝚊𝚝𝚎 𝚄𝚜𝚎𝚛
                   </button>
-
+                  </div>
+                  <div class="row mx-auto text-center">
                   <button
                     type="button"
                     class="btn"
@@ -79,6 +81,8 @@
                   >
                   𝙳𝚎𝚕𝚎𝚝𝚎 𝙰𝚌𝚌𝚘𝚞𝚗𝚝
                   </button>
+                  </div>
+                  
                 </div>
               </div>
             </form>
@@ -109,5 +113,21 @@ img {
   height: 300px;
   width: 320px;
   aspect-ratio: 1;
+}
+label{
+  color:rgb(210, 14, 70);
+  font-size:18px;
+  font-weight:bold
+}
+.btn{
+  background-color:rgb(255, 255, 255);
+  border-color:rgb(210, 14, 70);
+  font-weight:bold;
+  width:300px;
+  color:rgb(210, 14, 70);
+}
+.btn:hover{
+  background-color:rgb(210, 14, 70);
+  color:white;
 }
 </style>

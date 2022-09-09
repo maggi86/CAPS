@@ -14,13 +14,11 @@
                   <p>{{ item.description }}</p>
                 </div>
                 <div class="col">
-                  <p>{{ item.price }}</p>
+                  <p><span id="pink">{{ item.price }}</span></p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-            <div class="row2">
               <div class="col">
                 <div class="card mx-auto m-3 p-3 shadow">
                   <h2><span class="h2">C</span>art Summary</h2>
@@ -133,12 +131,15 @@ export default{
   color:rgb(210, 14, 70);
   font-weight:bolder;
 }
-.row2{
-  width:300px;
+#pink{
+  color:rgb(210, 14, 70);
 }
-.row{
+p{
+  font-weight:400
+}
+/* .row{
   width:700px;
-}
+} */
 /* i{
   color:rgb(4, 4, 4)
 } */

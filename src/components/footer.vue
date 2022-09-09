@@ -75,7 +75,7 @@ footer {
   margin-top: 0px;
   /* padding-bottom:10px; */
   height: auto;
-  background-color: rgba(174, 174, 174, 0.778);
+  background-color: rgba(81, 81, 81, 0.971);
   /* box-shadow:5px rgb(148, 148, 148); */
 }
 
@@ -84,7 +84,7 @@ p {
   margin-bottom: 0px;
   /* box-shadow: 10px 5px 15px rgba(178, 163, 163, 0.778); */
   /* background-color:rgb(7, 7, 7); */
-  color: black;
+  color: rgb(173, 173, 173);
 }
 .vr {
   width: 300px;

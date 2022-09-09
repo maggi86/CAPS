@@ -8,7 +8,7 @@
             <img :src="prod.img"/>
           </figure>
           </div>
-          <div class="col my-auto mx-auto text-center">
+          <div class="col my-lg-5 mx-auto text-center">
             <h1>{{ prod.title}}</h1>
             <div>
               <p>{{prod.description}}</p>

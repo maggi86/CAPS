@@ -24,20 +24,20 @@
             >
             <input v-model="password" type="password" class="form-control" />
           </div>
-       
-        </div> 
-        <div class="row mx-auto justify-content-center">
+       <div class="row mx-auto justify-content-center">
           <button type="button" @click="register" class="btn">
             𝚂𝚞𝚋𝚖𝚒𝚝
           </button>
         </div>
+        </div> 
+        
       </div>
     </div>
   </section>
 </template>
 
 <script>
-export default {
+export default{
   data() {
     return {
       fname: "",
@@ -61,7 +61,7 @@ export default {
 <style scoped>
 form {
   margin-top:60px;
-  width:600px;
+  /* width:600px; */
   /* height:500px */
   margin-bottom:60px;
 }
@@ -70,6 +70,10 @@ form {
 }
 label ,.btn , h2{
   font-weight:bold
+}
+.container{
+  padding-bottom:40px;
+  padding-top:40px
 }
 .btn{
   background-color:gray;

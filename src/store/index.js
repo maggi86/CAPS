@@ -142,7 +142,6 @@ export default createStore({
             context.commit("setToken", data.token);
             context.dispatch('check')
             router.push("/all");
-
           } else {
             alert(data.msg);
           }
@@ -210,6 +209,9 @@ export default createStore({
             console.log(data);
             if (data != null) {
               context.state.msg = data.msg;
+              setTimeout(() => {
+              context.state.msg = null;
+              }, 5000);
               // context.commit("setCart", JSON.parse(data));
               context.dispatch("getCart");
             }
