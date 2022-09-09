@@ -58,14 +58,14 @@ export default createStore({
     },
     // prods
     getProds: (context) => {
-      fetch("http://localhost:7001/products")
+      fetch("https://m-rings.herokuapp.com/products")
         .then((res) => res.json())
         .then((data) => {
           context.commit("setProds", data.results);
         });
     },
     getProd: (context, id) => {
-      fetch(`http://localhost:7001/products/${id}`)
+      fetch(`https://m-rings.herokuapp.com/products/${id}`)
         .then((res) => res.json())
         .then((data) => {
           context.commit("setProd", data.results[0]);
@@ -74,7 +74,7 @@ export default createStore({
 
     // add item
     addProd: (context, product) => {
-      fetch("http://localhost:7001/products", {
+      fetch("https://m-rings.herokuapp.com/products", {
         method: "POST",
         body: JSON.stringify(product),
         headers: {
@@ -90,7 +90,7 @@ export default createStore({
 
     // update
     updateProd: (context, product) => {
-      fetch("http://localhost:7001/products/" + product.id, {
+      fetch("https://m-rings.herokuapp.com/products/" + product.id, {
         method: "PUT",
         body: JSON.stringify(product),
         headers: {
@@ -105,7 +105,7 @@ export default createStore({
 
     // delete item
     deleteProd: (context, id) => {
-      fetch("http://localhost:7001/products/" + id, {
+      fetch("https://m-rings.herokuapp.com/products/" + id, {
         method: "DELETE",
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -118,7 +118,7 @@ export default createStore({
         });
     },
     getUsers: (context) => {
-      fetch("http://localhost:7001/users")
+      fetch("https://m-rings.herokuapp.com/users")
         .then((res) => res.json())
         .then((data) => {
           context.commit("setUsers", data.results);
@@ -126,7 +126,7 @@ export default createStore({
     },
     // login
     login: (context, payload) => {
-      fetch("http://localhost:7001/users", {
+      fetch("https://m-rings.herokuapp.com/users", {
         method: "PATCH",
         body: JSON.stringify(payload),
         headers: {
@@ -151,7 +151,7 @@ export default createStore({
 
     // register
     register: (context, payload) => {
-      fetch("http://localhost:7001/users", {
+      fetch("https://m-rings.herokuapp.com/users", {
         method: "POST",
         body: JSON.stringify(payload),
         headers: {
@@ -170,7 +170,7 @@ export default createStore({
     getCart: (context, id) => {
       if (context.state.user != null) {
         id = context.state.user.id;
-        fetch(`http://localhost:7001/users/${id}/cart`, {
+        fetch(`https://m-rings.herokuapp.com/users/${id}/cart`, {
           method: "GET",
           headers: {
             "Content-type": "application/json; charset=UTF-8",
@@ -197,7 +197,7 @@ export default createStore({
         alert("Please Login");
       } else {
         id = context.state.user.id;
-        fetch(`http://localhost:7001/users/${id}/cart`, {
+        fetch(`https://m-rings.herokuapp.com/users/${id}/cart`, {
           method: "POST",
           body: JSON.stringify(item),
           headers: {
@@ -220,7 +220,7 @@ export default createStore({
     // all items in cart
     deleteCart: (context, id) => {
       id = context.state.user.id;
-      fetch(`http://localhost:7001/users/${id}/cart`, {
+      fetch(`https://m-rings.herokuapp.com/users/${id}/cart`, {
         method: "DELETE",
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -237,7 +237,7 @@ export default createStore({
     // one item in cart
     deleteItem: (context, item, id) => {
       id = context.state.user.id;
-      fetch(`http://localhost:7001/users/${id}/cart/${item}`, {
+      fetch(`https://m-rings.herokuapp.com/users/${id}/cart/${item}`, {
         method: "DELETE",
         headers: {
           "Content-type": "application/json; charset=UTF-8",
