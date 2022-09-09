@@ -76,7 +76,6 @@ export default{
 
 <style scoped>
 #login{
-  margin-top:200px;
   height:80vh
 }
 form {
