@@ -1,8 +1,9 @@
 <template>
   <section id="login">
     <div class="container">
+      <div class="shadow p-3">
       <div class="row mx-auto justify-content-center align-content-center">
-        <div class="shadow p-3">
+        
           <h2 class="p-3 text-center">𝙻𝚘𝚐𝚒𝚗 𝙿𝚊𝚐𝚎</h2>
           <div class="mb-3">
             <label class="form-label"
@@ -36,13 +37,13 @@
           <div v-if="msg">
             {{msg}}
           </div>
-          <div class="row mx-auto justify-content-center">
+          
+        </div>
+        <div class="row mx-auto justify-content-center">
             <button type="button" @click="login" class="btn">
             𝚂𝚞𝚋𝚖𝚒𝚝
             </button>
       </div>
-        </div>
-        
       </div>
     </div>
   </section>
@@ -91,7 +92,8 @@ label ,.btn , h2{
   background-color:gray;
   color:white;
   width:200px;
-  height:40px
+  height:40px;
+  padding-bottom:20px;
 }
 .btn:hover{
   background-color:var(--color-);

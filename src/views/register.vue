@@ -1,10 +1,11 @@
 <template>
   <section id="register">
     <div class="container">
+      <div class="shadow p-3">
       <div
         class="row justify-content-center align-content-center"
       >
-        <div class="shadow p-3">
+        
           <h2 class="p-3 text-center">𝚁𝚎𝚐𝚒𝚜𝚝𝚎𝚛 𝙿𝚊𝚐𝚎</h2>
           <div class="mb-3">
             <label class="form-label">𝙽𝚊𝚖𝚎 :</label>
@@ -24,13 +25,13 @@
             >
             <input v-model="password" type="password" class="form-control" />
           </div>
-       <div class="row mx-auto justify-content-center">
+       
+        </div> 
+        <div class="row mx-auto justify-content-center">
           <button type="button" @click="register" class="btn">
             𝚂𝚞𝚋𝚖𝚒𝚝
           </button>
         </div>
-        </div> 
-        
       </div>
     </div>
   </section>
