@@ -25,4 +25,4 @@ export const updateData = async (qry, payload) => {
     let data = await db.collection(qry)
         .doc(payload.docid).update(payload)
         return data
-}
+}   
