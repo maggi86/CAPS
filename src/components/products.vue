@@ -2,7 +2,7 @@
   <div class="column mx-auto border-0" style="width: 300px; height:fit-content;">
   <div class="container">
     <!-- <div class="row"> -->
-      <router-link :to="{ name: 'single', params: { id: prod.id } }">
+      <router-link :to="{ name: 'single', params: { id: prod.docid } }">
         <img :src="prod.img" class="img-fluid" alt="..."/>
       </router-link>
     <!-- </div> -->
